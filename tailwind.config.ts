@@ -10,13 +10,14 @@ const config: Config = {
         extend: {
             screens: {
                 "tablet": { max: "1000px" },
-                "tabletdesk": { min: "1000px" },
-                "mobile": { max: "450px" }
+                "mobile": { max: "450px" },
+                "mobilemin": { min: "450px" },
+                "tabletmin": { max: "1000px" },
             },
-            colors: {
-                "cianolegal": "#29BDFF",
-            }
-        }
+        },
+        variants: {
+            fill: ["hover", "focus"]
+        },
     },
     plugins: [],
 };
