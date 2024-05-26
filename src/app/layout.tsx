@@ -18,7 +18,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     return (
         <html lang="pt-br">
             <body className={inter.className}>
-                <main className="overflow-x-hidden flex flex-1 text-neutral-700">
+                <main className="overflow-x-hidden flex text-neutral-700 bg-dot-black/[0.2]">
                     <SideBar />
                     {children}
                 </main>

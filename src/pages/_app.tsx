@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
     return (
-        <section className={`${inter.className} overflow-x-hidden flex flex-1 text-neutral-700`}>
+        <section className={`${inter.className} overflow-x-hidden flex text-neutral-700 bg-dot-black/[0.2]`}>
             <SideBar />
             <Component {...pageProps} />
         </section>
