@@ -1,5 +1,5 @@
+import ContactComponent from "@/components/Contact";
+
 export default function Contato() {
-    return (
-        <div>oi</div>
-    )
+    return <ContactComponent />
 }
