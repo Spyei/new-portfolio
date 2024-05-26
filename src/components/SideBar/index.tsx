@@ -20,8 +20,8 @@ export default function SideBar() {
             <h1 className="font-bold tablet:hidden">Links</h1>
             <div className="flex flex-col tablet:p-[2px]">
                 <SideBarLink icon={<BsGithub className="group-hover:fill-black transition" />} title="Github" type="socials" href="https://github.com/Spyei" key={Math.random()} />
-                <SideBarLink icon={<BsDiscord className="group-hover:fill-[#404EED] transition" />} title="Discord" type="socials" href="https://github.com/Spyei" key={Math.random()} />
-                <SideBarLink icon={<BsInstagram className="group-hover:fill-[#E1306C] transition" />} title="Instagram" type="socials" href="https://github.com/Spyei" key={Math.random()} />
+                <SideBarLink icon={<BsDiscord className="group-hover:fill-[#404EED] transition" />} title="Discord" type="socials" href="discord.com/users/955095844275781693" key={Math.random()} />
+                <SideBarLink icon={<BsInstagram className="group-hover:fill-[#E1306C] transition" />} title="Instagram" type="socials" href="https://www.instagram.com/caiuwu_" key={Math.random()} />
             </div>
         </section>
     );
