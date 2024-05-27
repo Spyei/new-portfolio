@@ -1,14 +1,8 @@
-import { ReactNode } from "react"
+"use client"
+import { StackPros } from "@/types";
 import { BiLogoTypescript } from "react-icons/bi";
 import { FaNodeJs, FaReact } from "react-icons/fa";
 import { RiJavascriptFill, RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-
-interface StackPros {
-    icon: ReactNode;
-    name: string;
-    link: string;
-    hover: string;
-}
 
 const colors = {
     javascript: "hover:shadow-[#F6DF1B]",
@@ -38,7 +32,8 @@ export default function Stacks() {
 
 function Stack({ icon, name, link, hover }: StackPros) {
     return (
-        <a href={link} target="_blank" className={`mobile:text-sm mobile:p-2 border-neutral-700 border-2 rounded-lg flex items-center p-3 gap-2 ${colors[hover as keyof typeof colors]} shadow-md transition duration-300`}>
+        <a
+            href={link} target="_blank" className={`mobile:text-sm mobile:p-2 border-neutral-700 border-2 rounded-lg flex items-center p-3 gap-2 ${colors[hover as keyof typeof colors]} shadow-md transition duration-300`}>
             {icon}
             <span>{name}</span>
         </a>

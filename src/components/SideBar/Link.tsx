@@ -1,16 +1,9 @@
 "use client"
+import { LinksProps } from "@/types";
 import Link from "next/link";
-import { ReactNode, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-interface Props {
-    href: string;
-    title: string;
-    icon: ReactNode;
-    filledIcon?: ReactNode;
-    type: "infos" | "socials";
-}
-
-export default function SideBarLink({ icon, title, href, filledIcon, type }: Props) {
+export default function SideBarLink({ icon, title, href, filledIcon, type }: LinksProps) {
     const [path, setPath] = useState("");
 
     useEffect(() => {
