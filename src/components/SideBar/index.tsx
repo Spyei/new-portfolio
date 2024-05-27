@@ -1,13 +1,19 @@
 "use client"
 import { IoMdInformationCircle, IoMdInformationCircleOutline } from "react-icons/io";
-import SideBarLink from "./Link";
 import { IoBriefcase, IoBriefcaseOutline, IoHome, IoHomeOutline, IoPerson, IoPersonOutline } from "react-icons/io5";
 import { MdOutlineTimeline } from "react-icons/md";
 import { BsDiscord, BsGithub, BsInstagram } from "react-icons/bs";
+import { motion } from "framer-motion";
+import SideBarLink from "./Link";
 
 export default function SideBar() {
     return (
-        <section className="flex flex-col gap-1 w-52 tablet:w-auto h-screen bg-neutral-100 p-6 tablet:p-[2px]">
+        <motion.section
+            className="flex flex-col gap-1 w-52 tablet:w-auto h-screen bg-neutral-100 p-6 tablet:p-[2px]"
+            initial={{ x: -500 }}
+            animate={{ x: 0 }}
+            transition={{ duration: 0.5 }}
+        >
             <h1 className="font-bold tablet:hidden">Informações</h1>
             <div className="flex flex-col">
                 <SideBarLink type="infos" filledIcon={<IoHome fill="#29BDFF" />} href="/" icon={<IoHomeOutline />} title="Início" key={Math.random()} />
@@ -23,6 +29,6 @@ export default function SideBar() {
                 <SideBarLink icon={<BsDiscord className="group-hover:fill-[#404EED] transition" />} title="Discord" type="socials" href="discord.com/users/955095844275781693" key={Math.random()} />
                 <SideBarLink icon={<BsInstagram className="group-hover:fill-[#E1306C] transition" />} title="Instagram" type="socials" href="https://www.instagram.com/caiuwu_" key={Math.random()} />
             </div>
-        </section>
+        </motion.section>
     );
 }
