@@ -1,5 +1,12 @@
+import Head from "next/head";
+
 export default function Projetos() {
     return (
-        <div>oi</div>
+        <>
+            <Head>
+                <title>Projetos</title>
+            </Head>
+            <div>oi</div>
+        </>
     )
 }

@@ -1,5 +1,12 @@
+import Head from "next/head";
+
 export default function Sobre() {
     return (
-        <div>oi</div>
+        <>
+            <Head>
+                <title>Sobre</title>
+            </Head>
+            <div>oi</div>
+        </>
     )
 }
