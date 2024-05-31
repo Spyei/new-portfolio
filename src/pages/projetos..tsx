@@ -1,3 +1,4 @@
+import ProjectsComponent from "@/components/Projects";
 import Head from "next/head";
 
 export default function Projetos() {
@@ -6,7 +7,7 @@ export default function Projetos() {
             <Head>
                 <title>Projetos</title>
             </Head>
-            <div>oi</div>
+            <ProjectsComponent/>
         </>
     )
 }
