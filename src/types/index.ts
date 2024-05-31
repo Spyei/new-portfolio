@@ -21,3 +21,14 @@ export interface ProjectProps {
     image: string;
     langs: string[];
 }
+
+export interface ProjectPageProps {
+    id: string;
+    title: string;
+    github?: string;
+    website?: string;
+    devlopment: boolean;
+    description: string;
+    images: string[];
+    tecnologies: string[];
+}
