@@ -3,7 +3,7 @@ import Project from "./Project";
 export default function ProjectsComponent() {
     return (
         <section className="w-screen flex justify-center">
-            <div className="max-w-[800px] w-full flex pt-16 mobile:pt-6">
+            <div className="max-w-[800px] w-full flex pt-16 tablet:px-6 mobile:pt-6">
                 <div className="flex gap-3 flex-col tablet:px w-full">
                     <h1 className="font-bold text-3xl mobile:text-xl">Projetos</h1>
                     <div>Projetos feitos por mim mesmo, ou ainda em desenvolvimento.</div>
