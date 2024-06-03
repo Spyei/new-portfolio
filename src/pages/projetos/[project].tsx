@@ -18,12 +18,22 @@ const projects: ProjectPageProps[] = [
         description: "A Simo é uma plataforma online dedicada à divulgação e descoberta de bots para o Discord, uma plataforma de comunicação popular entre gamers, comunidades online e grupos de amigos. Com uma ampla gama de funcionalidades, A Simo oferece aos usuários a oportunidade de encontrar, avaliar e interagir com uma variedade de bots para enriquecer suas experiências no Discord.",
         images: ["/simo/page.png", "/simo/bot.png", "/simo/profile.png", "/simo/loading.png", "/simo/team.png"],
         tecnologies: ["react", "tailwind", "ts"]
+    },
+    {
+        id: "postboy",
+        devlopment: true,
+        github: "",
+        website: "",
+        title: "Postboy",
+        description: "O Postboy é uma plataforma online dedicada à realização de requisições para APIs, semelhante ao Postman. Com uma interface intuitiva e fácil de usar, o Postboy oferece aos desenvolvedores e entusiastas da programação a oportunidade de testar, analisar e interagir com diversas APIs. Através de uma ampla gama de funcionalidades, o Postboy permite criar, salvar e organizar requisições, visualizar respostas em tempo real e gerar documentação automatizada, proporcionando uma experiência rica e eficiente para a exploração e integração de APIs.",
+        images: ["/postboy/page.png", "/postboy/page.png"],
+        tecnologies: ["next", "tailwind", "ts"]
     }
 ]
 
 export default function ProjectsPage() {
     const { query: { project: id } } = useRouter();
-    const [project, setProject] = useState<ProjectPageProps | null>(null);
+    const [project, setProject] = useState<ProjectPageProps>();
 
     useEffect(() => {
         const project = projects.find((a) => a.id === id);
