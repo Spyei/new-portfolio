@@ -17,9 +17,9 @@ export default function SideBar() {
             <h1 className="font-bold tablet:hidden">Informações</h1>
             <div className="flex flex-col">
                 <SideBarLink type="infos" filledIcon={<IoHome fill="#29BDFF" />} href="/" icon={<IoHomeOutline />} title="Início" key={Math.random()} />
-                <SideBarLink type="infos" filledIcon={<IoMdInformationCircle fill="#29BDFF" />} href="/sobre" icon={<IoMdInformationCircleOutline />} title="Sobre" key={Math.random()} />
+                {/* <SideBarLink type="infos" filledIcon={<IoMdInformationCircle fill="#29BDFF" />} href="/sobre" icon={<IoMdInformationCircleOutline />} title="Sobre" key={Math.random()} /> */}
                 <SideBarLink type="infos" filledIcon={<IoBriefcase fill="#29BDFF" />} href="/projetos" icon={<IoBriefcaseOutline />} title="Projetos" key={Math.random()} />
-                <SideBarLink type="infos" filledIcon={<MdOutlineTimeline fill="#29BDFF" />} href="/timeline" icon={<MdOutlineTimeline />} title="Timeline" key={Math.random()} />
+                {/* <SideBarLink type="infos" filledIcon={<MdOutlineTimeline fill="#29BDFF" />} href="/timeline" icon={<MdOutlineTimeline />} title="Timeline" key={Math.random()} /> */}
                 <SideBarLink type="infos" filledIcon={<IoPerson fill="#29BDFF" />} href="/contato" icon={<IoPersonOutline />} title="Contato" key={Math.random()} />
             </div>
             <hr className="hidden tablet:border-neutral-600 tablet:border-1 tablet:my-2 tablet:rounded-lg tablet:w-1/2 tablet:self-center tablet:block" />
