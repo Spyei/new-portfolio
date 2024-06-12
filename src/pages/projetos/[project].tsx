@@ -36,7 +36,7 @@ const projects: ProjectPageProps[] = [
         website: "",
         title: "Postboy",
         description: "Connections é um bot de Discord projetado para facilitar conexões entre servidores, promovendo o engajamento e dinamismo em seu servidor. Com uma interface intuitiva e fácil de usar, Connections oferece aos administradores e membros de servidores a oportunidade de criar e fortalecer laços entre diferentes comunidades. Através de uma ampla gama de funcionalidades, Connections permite estabelecer parcerias, organizar eventos inter-servidores, compartilhar anúncios e promover atividades colaborativas, proporcionando uma experiência rica e envolvente para todos os participantes. Seja para expandir sua rede ou simplesmente aumentar a interação dentro da sua comunidade, Connections é a ferramenta ideal para transformar a dinâmica do seu servidor.",
-        images: ["/connections/connections.png", "/connections/page.png", "/connections/createcon.png"],
+        images: ["/connections/page.png", "/connections/connections.png", "/connections/createcon.png"],
         tecnologies: ["next", "tailwind", "ts"]
     }
 ]
