@@ -10,6 +10,7 @@ export default function ProjectsComponent() {
                     <div className="w-full flex flex-col gap-4">
                         <Project description="Simo botlist é um site que divulga bots de discord" image="/simo/page.png" langs={["react", "tailwind", "ts"]} name="Simo" key={Math.random()} />
                         <Project name="Postboy" langs={["next", "tailwind", "ts"]} description="Postboy é um site que faz requisições http para um url." image="/postboy/page.png" key={Math.random()} />
+                        <Project name="Connections" langs={["next", "tailwind", "ts"]} description="Connections Dashboard é um website que modifica propriedades do bot e gerencia conexões." image="/connections/page.png" key={Math.random()} />
                     </div>
                 </div>
             </div>

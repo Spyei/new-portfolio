@@ -28,6 +28,16 @@ const projects: ProjectPageProps[] = [
         description: "O Postboy é uma plataforma online dedicada à realização de requisições para APIs, semelhante ao Postman. Com uma interface intuitiva e fácil de usar, o Postboy oferece aos desenvolvedores e entusiastas da programação a oportunidade de testar, analisar e interagir com diversas APIs. Através de uma ampla gama de funcionalidades, o Postboy permite criar, salvar e organizar requisições, visualizar respostas em tempo real e gerar documentação automatizada, proporcionando uma experiência rica e eficiente para a exploração e integração de APIs.",
         images: ["/postboy/page.png", "/postboy/page.png"],
         tecnologies: ["next", "tailwind", "ts"]
+    },
+    {
+        id: "connections",
+        devlopment: true,
+        github: "",
+        website: "",
+        title: "Postboy",
+        description: "Connections é um bot de Discord projetado para facilitar conexões entre servidores, promovendo o engajamento e dinamismo em seu servidor. Com uma interface intuitiva e fácil de usar, Connections oferece aos administradores e membros de servidores a oportunidade de criar e fortalecer laços entre diferentes comunidades. Através de uma ampla gama de funcionalidades, Connections permite estabelecer parcerias, organizar eventos inter-servidores, compartilhar anúncios e promover atividades colaborativas, proporcionando uma experiência rica e envolvente para todos os participantes. Seja para expandir sua rede ou simplesmente aumentar a interação dentro da sua comunidade, Connections é a ferramenta ideal para transformar a dinâmica do seu servidor.",
+        images: ["/connections/connections.png", "/connections/page.png", "/connections/createcon.png"],
+        tecnologies: ["next", "tailwind", "ts"]
     }
 ]
 
