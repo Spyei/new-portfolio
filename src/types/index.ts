@@ -5,6 +5,9 @@ export interface StackPros {
     name: string;
     link: string;
     hover: string;
+    initial?: any;
+    animate?: any;
+    transition?: any;
 }
 
 export interface LinksProps {
