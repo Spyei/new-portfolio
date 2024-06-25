@@ -57,7 +57,7 @@ export default function ProjectsPage() {
             <Head>
                 <title>Projeto | {project?.title}</title>
             </Head>
-            <motion.section className="w-screen flex justify-center overflow-y-hidden">
+            <motion.section initial={{ y: -10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="w-screen flex justify-center overflow-y-hidden">
                 {project && (
                     <div className="max-w-[800px] w-full flex pt-16 mobile:pt-6">
                         <div className="flex gap-3 flex-col tablet:px-6 w-full">
