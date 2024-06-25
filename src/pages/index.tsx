@@ -5,25 +5,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const words = [
-    {
-        text: "Olá!"
-    },
-    {
-        text: "Meu",
-    },
-    {
-        text: "nome",
-    },
-    {
-        text: "é",
-    },
-    {
-        text: "Caio",
-        className: "text-blue-500",
-    }
-]
-
 export default function Home() {
     return (
         <>
@@ -33,7 +14,7 @@ export default function Home() {
             <section className="w-screen flex justify-center">
                 <div className="max-w-[800px] w-full flex pt-16 mobile:pt-6">
                     <div className="flex gap-3 flex-col tablet:px-6">
-                        <TypewriterEffect className="font-bold text-4xl mobile:text-xl items-center flex" words={words}/>
+                        <h1 className="font-bold text-3xl mobile:text-xl">Olá! Meu nome é Caio 👋</h1>
                         <div className="flex gap-1 flex-col">
                             <p>Tenho 17 anos, e sou um <strong>Desenvolvedor Front-end</strong> apaixonado por programação, tenho <strong>1 ano de experiência</strong> na área, fazendo freelances e projetos pessoais.</p>
                             <p>Estou constantemente em busca de aprendizado e aprimoramento dos meus conhecimentos, sempre tentando melhorar a cada dia!</p>
