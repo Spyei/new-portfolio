@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { BiLink } from "react-icons/bi";
 import { BsGithub } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 const projects: ProjectPageProps[] = [
     {
@@ -56,7 +57,7 @@ export default function ProjectsPage() {
             <Head>
                 <title>Projeto | {project?.title}</title>
             </Head>
-            <section className="w-screen flex justify-center overflow-y-hidden">
+            <motion.section className="w-screen flex justify-center overflow-y-hidden">
                 {project && (
                     <div className="max-w-[800px] w-full flex pt-16 mobile:pt-6">
                         <div className="flex gap-3 flex-col tablet:px-6 w-full">
@@ -90,7 +91,7 @@ export default function ProjectsPage() {
                         </div>
                     </div>
                 )}
-            </section>
+            </motion.section>
         </>
     )
 }
