@@ -1,4 +1,3 @@
-"use client"
 import ImageCarousel from "@/components/Projects/Carousel";
 import { languages } from "@/components/Projects/Project";
 import { ProjectPageProps } from "@/types";
