@@ -14,7 +14,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
     return (
         <HeroHighlight>
             <ThemeProvider attribute="class">
-                <section className={`${inter.className} overflow-x-hidden flex min-h-screen`}>
+                <section className={`${inter.className} overflow-x-hidden flex min-h-screen text-neutral-700 dark:text-neutral-300`}>
                     <SideBar />
                     <Component {...pageProps} />
                 </section>
