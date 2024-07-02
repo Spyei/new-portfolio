@@ -63,7 +63,7 @@ export default function ProjectsPage() {
                         <div className="flex gap-3 flex-col tablet:px-6 w-full">
                             <div className="flex gap-2 items-center">
                                 <h1 className="font-bold text-3xl mobile:text-xl">{project.title}</h1>
-                                {project.devlopment && <div className="p-1 bg-white border-neutral-600 border-2 rounded-xl text-sm">Desenvolvendo</div>}
+                                {project.devlopment && <div className="p-1 bg-white dark:bg-neutral-800 border-neutral-600 border-2 rounded-xl text-sm">Desenvolvendo</div>}
                             </div>
                             <div className="break-words w-full">{project.description}</div>
                             <div className="flex">
