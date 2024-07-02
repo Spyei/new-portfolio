@@ -15,6 +15,9 @@ export default function Home() {
                 <meta name="og:title" content="Spyei Portfolio" />
                 <meta name="og:description" content="Um portfolio simples feito por mim mesmo 🗣🔥" />
                 <meta name="og:image" content="https://cdn.discordapp.com/avatars/955095844275781693/4007e7943493138d10aeb5d6e64e481c.webp" />
+                <meta property="og:image:type" content="image/png" />
+                <meta property="og:image:width" content="250" />
+                <meta property="og:image:height" content="250" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Spyei Portfolio" />
                 <meta name="twitter:description" content="Um portfolio simples feito por mim mesmo 🗣🔥" />
