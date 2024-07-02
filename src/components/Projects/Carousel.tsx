@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import Slider, { Settings } from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import React, { useState } from "react";
+import Slider, { Settings } from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface ImageCarouselProps {
     images: string[];
@@ -23,11 +24,9 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
     };
 
     const toggleExpandImage = (image: string) => {
-        if (expandedImage === image) {
-            setExpandedImage(null);
-        } else {
-            setExpandedImage(image);
-        }
+        if (expandedImage === image) return setExpandedImage(null);
+
+        setExpandedImage(image);
     };
 
     return (
@@ -43,14 +42,28 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
                     </div>
                 ))}
             </Slider>
-            {expandedImage && (
-                <div
-                    className="fixed top-0 left-0 w-full h-full p-16 bg-black bg-opacity-80 flex justify-center items-center z-50"
-                    onClick={() => toggleExpandImage(expandedImage)}
-                >
-                    <img src={expandedImage} alt="Expanded Image" className="max-w-full max-h-full" />
-                </div>
-            )}
+            <AnimatePresence>
+                {expandedImage && (
+                    <>
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="bg-black bg-opacity-80 top-0 left-0 fixed h-full w-full"
+                        />
+                        <motion.div
+                            initial={{ opacity: 0, y: 300 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -500 }}
+                            transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                            className="fixed top-0 left-0 w-full h-full p-12 flex justify-center items-center z-20"
+                            onClick={() => toggleExpandImage(expandedImage)}
+                        >
+                            <img src={expandedImage} alt="Expanded Image" className="max-w-full max-h-full" />
+                        </motion.div>
+                    </>
+                )}
+            </AnimatePresence>
         </div>
     );
 };
