@@ -1,7 +1,5 @@
-"use client";
 import Stacks from "@/components/Mixed/Stacks";
 import Project from "@/components/Projects/Project";
-import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -25,7 +23,7 @@ export default function Home() {
                         <div className="flex flex-col gap-1">
                             <h1 className="font-bold text-2xl mobile:text-xl mt-6">Projetos</h1>
                             <span>Projetos que eu estou desenvolvendo atualmente, <Link href="/projetos" className="text-blue-500 underline">ver mais projetos</Link>.</span>
-                            <div className="w-full flex flex-col gap-4">
+                            <div className="w-full flex flex-col gap-4 mobile:mb-10">
                                 <motion.div initial={{ x: -10, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.2 }}>
                                     <Project name="Connections" langs={["next", "tailwind", "ts"]} description="Connections Dashboard é um website que modifica propriedades do bot e gerencia conexões." image="/connections/page.png" key={Math.random()} />
                                 </motion.div>

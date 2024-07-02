@@ -77,7 +77,7 @@ function Stack({ icon, name, link, hover, initial, animate, transition }: StackP
             transition={transition}
             href={link}
             target="_blank"
-            className={`mobile:text-sm mobile:p-2 border-neutral-700 border-2 rounded-lg flex items-center p-3 gap-2 ${colors[hover as keyof typeof colors]} shadow-md transition-shadow duration-300 bg-white`}>
+            className={`mobile:text-sm mobile:p-2 border-neutral-700 border-2 rounded-lg flex items-center p-3 gap-2 ${colors[hover as keyof typeof colors]} shadow-md hover:transition-shadow transition-colors duration-300 bg-white dark:bg-neutral-800`}>
             {icon}
             <span>{name}</span>
         </motion.a>

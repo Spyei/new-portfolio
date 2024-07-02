@@ -16,7 +16,7 @@ export const languages = {
 
 export default function Project({ name, description, image, langs }: ProjectProps) {
     return (
-        <Link href={`/projetos/${name.toLowerCase()}`}>
+        <Link href={`/projeto/${name.toLowerCase()}`}>
             <WobbleCard>
                 <div className="flex gap-3 mobile:gap-0 text-start mobile:flex-col">
                     <div className="w-[30%] min-h-full flex mobile:w-full">

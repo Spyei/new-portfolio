@@ -30,7 +30,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
     };
 
     return (
-        <div className="relative w-full max-w-4xl mx-auto tablet:p">
+        <div className="relative w-full max-w-4xl mx-auto dark:border-neutral-500 border-2 rounded-lg">
             <Slider {...settings}>
                 {images.map((image, index) => (
                     <div key={index} className="text-center" onClick={() => toggleExpandImage(image)}>
@@ -49,14 +49,14 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            className="bg-black bg-opacity-80 top-0 left-0 fixed h-full w-full"
+                            className="bg-black bg-opacity-80 top-0 left-0 fixed h-full w-full z-[55]"
                         />
                         <motion.div
                             initial={{ opacity: 0, y: 300 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -500 }}
                             transition={{ type: "spring", stiffness: 500, damping: 30 }}
-                            className="fixed top-0 left-0 w-full h-full p-12 flex justify-center items-center z-20"
+                            className="fixed top-0 left-0 w-full h-full p-12 flex justify-center items-center z-[60] mobile:px-2"
                             onClick={() => toggleExpandImage(expandedImage)}
                         >
                             <img src={expandedImage} alt="Expanded Image" className="max-w-full max-h-full" />
@@ -72,7 +72,7 @@ const NextArrow = (props: any) => {
     const { onClick } = props;
     return (
         <div
-            className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-neutral-700 bg-opacity-50 rounded-full p-2 mobile:p-1 cursor-pointer z-10 md:right-6 lg:right-6"
+            className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-neutral-700 dark:bg-neutral-600 bg-opacity-50 rounded-full p-2 mobile:p-1 cursor-pointer z-10 md:right-6 lg:right-6"
             onClick={onClick}
         >
             <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -86,7 +86,7 @@ const PrevArrow = (props: any) => {
     const { onClick } = props;
     return (
         <div
-            className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-neutral-700 bg-opacity-50 rounded-full p-2 mobile:p-1 cursor-pointer z-10 md:left-6 lg:left-6"
+            className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-neutral-700 dark:bg-neutral-600 bg-opacity-50 rounded-full p-2 mobile:p-1 cursor-pointer z-10 md:left-6 lg:left-6"
             onClick={onClick}
         >
             <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

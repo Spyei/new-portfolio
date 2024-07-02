@@ -15,7 +15,7 @@ export default function ContactComponent() {
                             name="name"
                             required
                             placeholder="Nome"
-                            className="p-2 bg-neutral-100 border-2 rounded-lg border-neutral-300 focus:outline-none focus:border-neutral-400 duration-300 transition-colors"
+                            className="dark:bg-neutral-800 dark:border-neutral-700 p-2 bg-neutral-100 border-2 rounded-lg border-neutral-300 focus:outline-none focus:border-neutral-400 dark:focus:border-neutral-600 duration-300 transition-colors"
                         />
                         <motion.input
                             initial={{ x: -10, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.3 }}
@@ -23,7 +23,7 @@ export default function ContactComponent() {
                             name="email"
                             required
                             placeholder="E-mail"
-                            className="p-2 bg-neutral-100 border-2 rounded-lg border-neutral-300 focus:outline-none focus:border-neutral-400 duration-300 transition-colors"
+                            className="dark:bg-neutral-800 dark:border-neutral-700 p-2 bg-neutral-100 border-2 rounded-lg border-neutral-300 focus:outline-none focus:border-neutral-400 dark:focus:border-neutral-600 duration-300 transition-colors"
                         />
                         <motion.textarea
                             initial={{ x: -10, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.4 }}
@@ -31,10 +31,10 @@ export default function ContactComponent() {
                             placeholder="Mensagem"
                             rows={10}
                             required
-                            className="p-2 bg-neutral-100 border-2 rounded-lg border-neutral-300 focus:outline-none focus:border-neutral-400 duration-300 transition-colors"
+                            className="dark:bg-neutral-800 dark:border-neutral-700 p-2 bg-neutral-100 border-2 rounded-lg border-neutral-300 focus:outline-none focus:border-neutral-400 dark:focus:border-neutral-600 duration-300 transition-colors"
                         />
                         <BackgroundGradient>
-                            <button type="submit" className="w-full border-2 border-neutral-300 rounded-lg bg-neutral-100 p-2 transition-colors">Enviar</button>
+                            <button type="submit" className="dark:bg-neutral-800 dark:border-neutral-700 w-full border-2 border-neutral-300 rounded-lg bg-neutral-100 p-3 transition-colors">Enviar</button>
                         </BackgroundGradient>
                     </form>
                 </div>
