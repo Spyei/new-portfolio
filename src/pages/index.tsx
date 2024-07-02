@@ -1,3 +1,4 @@
+"use client"
 import Stacks from "@/components/Mixed/Stacks";
 import Project from "@/components/Projects/Project";
 import Head from "next/head";
@@ -10,6 +11,13 @@ export default function Home() {
         <>
             <Head>
                 <title>Início</title>
+                <meta name="description" content="Um simples portfolio feito por mim mesmo 🗣🔥" />
+                <meta name="og:title" content="Spyei Portfolio" />
+                <meta name="og:description" content="Um simples portfolio feito por mim mesmo 🗣🔥" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Spyei Portfolio" />
+                <meta name="twitter:description" content="Um simples portfolio feito por mim mesmo 🗣🔥" />
+                <meta name="twitter:image" content="https://cdn.discordapp.com/avatars/955095844275781693/4007e7943493138d10aeb5d6e64e481c.webp" />
             </Head>
             <HeroHighlight containerClassName="w-screen flex justify-center min-h-screen">
                 <div className="max-w-[800px] w-full flex pt-16 mobile:pt-6">
