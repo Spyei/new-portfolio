@@ -1,28 +1,20 @@
-import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import SideBar from "@/components/SideBar";
+import { ThemeProvider } from "next-themes";
+import { ReactNode } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const viewport: Viewport = {
-    themeColor: "#29BDFF"
-};
-
-export const metadata: Metadata = {
-    title: "Página inicial",
-    description: "Um simples portfolio",
-};
-
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
     return (
         <html lang="pt-br">
-            <body className={inter.className}>
-                <main className="overflow-x-hidden flex text-neutral-700 bg-dot-black/[0.2]">
+            <ThemeProvider attribute="class">
+                <body className={inter.className}>
                     <SideBar />
                     {children}
-                </main>
-            </body>
+                </body>
+            </ThemeProvider>
         </html>
     );
 }
