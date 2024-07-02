@@ -11,12 +11,13 @@ export default function Home() {
         <>
             <Head>
                 <title>Início</title>
-                <meta name="description" content="Um simples portfolio feito por mim mesmo 🗣🔥" />
+                <meta name="description" content="Um portfolio simples feito por mim mesmo 🗣🔥" />
                 <meta name="og:title" content="Spyei Portfolio" />
-                <meta name="og:description" content="Um simples portfolio feito por mim mesmo 🗣🔥" />
+                <meta name="og:description" content="Um portfolio simples feito por mim mesmo 🗣🔥" />
+                <meta name="og:image" content="https://cdn.discordapp.com/avatars/955095844275781693/4007e7943493138d10aeb5d6e64e481c.webp" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Spyei Portfolio" />
-                <meta name="twitter:description" content="Um simples portfolio feito por mim mesmo 🗣🔥" />
+                <meta name="twitter:description" content="Um portfolio simples feito por mim mesmo 🗣🔥" />
                 <meta name="twitter:image" content="https://cdn.discordapp.com/avatars/955095844275781693/4007e7943493138d10aeb5d6e64e481c.webp" />
             </Head>
             <HeroHighlight containerClassName="w-screen flex justify-center min-h-screen">

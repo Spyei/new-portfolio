@@ -55,17 +55,14 @@ export default function ProjectsPage() {
     return (
         <>
             <Head>
-                {project && (
-                    <>
-                        <title>Projeto | {project.title}</title>
-                        <meta name="description" content={project.description} />
-                        <meta name="og:image" content={project.images[0]} />
-                        <meta name="og:title" content={project.title} />
-                        <meta name="og:description" content={project.description} />
-                        <meta name="twitter:title" content={project.title} />
-                        <meta name="twitter:description" content={project.description} />
-                    </>
-                )}
+                <title>Projeto | {project?.title}</title>
+                <meta name="description" content={project?.description} />
+                <meta name="og:image" content={project?.images[0]} />
+                <meta name="og:title" content={project?.title} />
+                <meta name="og:description" content={project?.description} />
+                <meta name="twitter:title" content={project?.title} />
+                <meta name="twitter:description" content={project?.description} />
+                <meta name="twitter:image" content={project?.images[0]} />
             </Head>
             <motion.section initial={{ x: -30, opacity: 0 }} animate={{ x: 0, opacity: 1 }} className="w-screen flex justify-center overflow-y-hidden">
                 {project && (
