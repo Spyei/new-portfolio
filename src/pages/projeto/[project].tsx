@@ -55,7 +55,17 @@ export default function ProjectsPage() {
     return (
         <>
             <Head>
-                <title>Projeto | {project?.title}</title>
+                {project && (
+                    <>
+                        <title>Projeto | {project.title}</title>
+                        <meta name="description" content={project.description} />
+                        <meta name="og:image" content={project.images[0]} />
+                        <meta name="og:title" content={project.title} />
+                        <meta name="og:description" content={project.description} />
+                        <meta name="twitter:title" content={project.title} />
+                        <meta name="twitter:description" content={project.description} />
+                    </>
+                )}
             </Head>
             <motion.section initial={{ x: -30, opacity: 0 }} animate={{ x: 0, opacity: 1 }} className="w-screen flex justify-center overflow-y-hidden">
                 {project && (
@@ -73,12 +83,12 @@ export default function ProjectsPage() {
                                 <div className="flex gap-2">
                                     {project.github !== "" && (
                                         <a href={project.github} target="_blank">
-                                            <BsGithub size={26} className="hover:fill-black transition"/>
+                                            <BsGithub size={26} className="hover:fill-black transition" />
                                         </a>
                                     )}
                                     {project.website !== "" && (
                                         <a href={project.github} target="_blank">
-                                            <BiLink size={26} className="hover:fill-[#29BDFF] transition"/>
+                                            <BiLink size={26} className="hover:fill-[#29BDFF] transition" />
                                         </a>
                                     )}
                                 </div>
