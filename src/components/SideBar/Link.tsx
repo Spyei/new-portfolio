@@ -16,7 +16,7 @@ export default function SideBarLink({ icon, title, href, filledIcon, type }: Lin
             <span className="tablet:hidden">{title}</span>
         </Link>
     ) : (
-        <a target="_blank" href={href} className="tablet:justify-center tablet:text-base h-10 flex gap-2 p-4 rounded-lg transition items-center text-sm hover:text-black group">
+        <a target="_blank" href={href} className="tablet:justify-center tablet:text-base h-10 flex gap-2 p-4 rounded-lg transition items-center text-sm hover:text-black group/legal">
             {icon}
             <span className="tablet:hidden">{title}</span>
         </a>
