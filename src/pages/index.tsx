@@ -13,7 +13,7 @@ export default function Home() {
             <Head>
                 <title>Início</title>
             </Head>
-            <HeroHighlight containerClassName="w-screen flex justify-center">
+            <HeroHighlight containerClassName="w-screen flex justify-center min-h-screen">
                 <div className="max-w-[800px] w-full flex pt-16 mobile:pt-6">
                     <div className="flex gap-3 flex-col tablet:px-6">
                         <h1 className="font-bold text-3xl mobile:text-xl">Olá! Meu nome é Caio 👋</h1>
