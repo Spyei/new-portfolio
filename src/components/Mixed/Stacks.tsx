@@ -54,7 +54,14 @@ export default function Stacks() {
             <span>Tecnologias que uso em meus projetos, e que tenho conhecimento.</span>
             <div className="flex flex-wrap mt-2 gap-4">
                 {stacks.map((stack, index) => (
-                    <Stack initial={{ x: -10, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: index * 0.2 }} hover={stack.name.toLowerCase().replace("tailwind css", "tailwindcss")} key={index} {...stack} /> 
+                    <Stack
+                        initial={{ x: -10, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ delay: index * 0.2 }}
+                        hover={stack.name.toLowerCase().replace("tailwind css", "tailwindcss")}
+                        key={index}
+                        {...stack}
+                    />
                 ))}
             </div>
         </div>
@@ -64,7 +71,13 @@ export default function Stacks() {
 function Stack({ icon, name, link, hover, initial, animate, transition }: StackPros) {
 
     return (
-        <motion.a initial={initial} animate={animate} transition={transition} href={link} target="_blank" className={`mobile:text-sm mobile:p-2 border-neutral-700 border-2 rounded-lg flex items-center p-3 gap-2 ${colors[hover as keyof typeof colors]} shadow-md transition-shadow duration-300`}>
+        <motion.a
+            initial={initial}
+            animate={animate}
+            transition={transition}
+            href={link}
+            target="_blank"
+            className={`mobile:text-sm mobile:p-2 border-neutral-700 border-2 rounded-lg flex items-center p-3 gap-2 ${colors[hover as keyof typeof colors]} shadow-md transition-shadow duration-300 bg-white`}>
             {icon}
             <span>{name}</span>
         </motion.a>
