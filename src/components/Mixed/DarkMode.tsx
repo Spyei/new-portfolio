@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export default function DarkMode() {
     const { theme, setTheme } = useTheme();
-    const [isDark, setIsDark] = useState(false);
+    const [isDark, setIsDark] = useState(theme === "dark");
 
     const handleThemeChange = () => {
         setIsDark(!isDark);
