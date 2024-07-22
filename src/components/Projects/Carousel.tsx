@@ -30,7 +30,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
     };
 
     return (
-        <div className="relative w-full max-w-4xl mx-auto dark:border-neutral-500 border-2 rounded-lg">
+        <div className="relative w-full max-w-4xl mx-auto rounded-lg">
             <Slider {...settings}>
                 {images.map((image, index) => (
                     <div key={index} className="text-center" onClick={() => toggleExpandImage(image)}>
