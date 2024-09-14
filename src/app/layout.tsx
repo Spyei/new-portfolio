@@ -10,14 +10,12 @@ const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
     return (
         <html lang="pt-br">
-            <HeroHighlight>
-                <ThemeProvider attribute="class">
-                    <body className={inter.className}>
-                        <SideBar />
-                        {children}
-                    </body>
-                </ThemeProvider>
-            </HeroHighlight>
+            <ThemeProvider attribute="class">
+                <body className={inter.className}>
+                    <SideBar />
+                    {children}
+                </body>
+            </ThemeProvider>
         </html>
     );
 }

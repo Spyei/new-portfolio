@@ -1,7 +1,5 @@
 "use client"
-import { IoMdInformationCircle, IoMdInformationCircleOutline } from "react-icons/io";
 import { IoBriefcase, IoBriefcaseOutline, IoHome, IoHomeOutline, IoPerson, IoPersonOutline } from "react-icons/io5";
-import { MdOutlineTimeline } from "react-icons/md";
 import { BsDiscord, BsGithub, BsInstagram } from "react-icons/bs";
 import { motion } from "framer-motion";
 import SideBarLink from "./Link";

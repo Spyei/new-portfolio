@@ -14,6 +14,7 @@ export default function Home() {
         const calculateAge = () => {
             const birthdate = new Date(2007, 8, 8);
             const today = new Date();
+            
             let age = today.getFullYear() - birthdate.getFullYear();
             const monthDiff = today.getMonth() - birthdate.getMonth();
             const dayDiff = today.getDate() - birthdate.getDate();
@@ -44,7 +45,7 @@ export default function Home() {
                 <meta name="twitter:description" content="Um portfolio simples feito por mim mesmo 🗣🔥" />
                 <meta name="twitter:image" content="https://cdn.discordapp.com/avatars/955095844275781693/4007e7943493138d10aeb5d6e64e481c.webp" />
             </Head>
-            <HeroHighlight containerClassName="w-screen flex justify-center min-h-screen">
+            <div className="w-screen flex justify-center min-h-screen">
                 <div className="max-w-[800px] w-full flex pt-16 mobile:pt-6">
                     <div className="flex gap-3 flex-col tablet:px-6">
                         <h1 className="font-bold text-3xl mobile:text-xl">Olá! Meu nome é Caio 👋</h1>
@@ -64,7 +65,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            </HeroHighlight>
+            </div>
         </>
     )
 }
