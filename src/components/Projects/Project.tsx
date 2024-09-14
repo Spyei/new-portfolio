@@ -25,7 +25,7 @@ export default function Project({ name, description, image, langs }: ProjectProp
                     <div className="p-3 flex flex-col gap-1 w-full">
                         <h1 className="font-bold text-xl">{name}</h1>
                         <span className="text-sm">{description}</span>
-                        <div className="flex w-full justify-end">
+                        <div className="flex w-full justify-end gap-1">
                             {langs.map((lang) => languages[lang as keyof typeof languages])}
                         </div>
                     </div>

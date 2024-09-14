@@ -6,7 +6,6 @@ import SideBar from "@/components/SideBar";
 import { Inter } from "next/font/google";
 import { HeroHighlight } from "@/components/ui/hero-highlight";
 import { ThemeProvider } from "next-themes";
-import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
