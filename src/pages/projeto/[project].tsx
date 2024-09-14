@@ -42,7 +42,7 @@ const projects: ProjectPageProps[] = [
             "/connections/connectionconfig.jpg",
             "/connections/connectionmetric.jpg", 
             "/connections/connectionmodal.jpg", 
-            "/connections/connectionpage.jpg",
+            "/connections/page.jpg",
             "/connections/connections.jpg",
             "/connections/connectionslist.jpg",
             "/connections/flags.jpg",

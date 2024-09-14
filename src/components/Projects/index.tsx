@@ -18,7 +18,7 @@ const projects = [
         name: "Connections",
         langs: ["next", "tailwind", "ts"],
         description: "Connections Dashboard é um website que modifica propriedades do bot e gerencia conexões.",
-        image: "/connections/page.png"
+        image: "/connections/page.jpg"
     }
 ]
 
