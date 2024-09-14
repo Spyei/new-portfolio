@@ -33,7 +33,7 @@ const stacks = [
     {
         name: "NextJs",
         link: "https://nextjs.org/",
-        icon: <RiNextjsFill size={26} fill="#000" />
+        icon: <RiNextjsFill size={26} fill="#181818" />
     },
     {
         name: "Tailwind CSS",

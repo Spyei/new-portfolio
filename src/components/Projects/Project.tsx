@@ -9,7 +9,7 @@ export const languages = {
     js: <RiJavascriptFill size={26} fill="#F6DF1B" />,
     ts: <BiLogoTypescript size={26} fill="#3178C6" />,
     react: <FaReact size={26} fill="#5FD9FA" />,
-    next: <RiNextjsFill size={26} fill="#000" />,
+    next: <RiNextjsFill size={26} fill="#181818" />,
     tailwind: <RiTailwindCssFill fill="#08C4DD" size={26} />,
     node: <FaNodeJs size={26} fill="#57A746" />,
 }
