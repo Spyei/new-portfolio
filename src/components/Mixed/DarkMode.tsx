@@ -1,17 +1,21 @@
 import { useTheme } from "next-themes";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function DarkMode() {
-    const { theme, setTheme } = useTheme();
-    const [isDark, setIsDark] = useState(theme === "dark");
+    const { resolvedTheme, setTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => setMounted(true), []);
+
+    const isDark = resolvedTheme === "dark";
 
     const handleThemeChange = () => {
-        setIsDark(!isDark);
-
-        return theme === "dark" ? setTheme("light") : setTheme("dark");
+        setTheme(isDark ? "light" : "dark");
     };
+
+    if (!mounted) return null;
 
     return (
         <button
@@ -21,9 +25,9 @@ export default function DarkMode() {
             <div className="tablet:hidden">
                 <motion.span
                     animate={{ x: isDark ? 16 : -14 }}
-                    className={`absolute top-[14px] bottom-0 left-0 right-0`}
+                    className="absolute top-[14px] bottom-0 left-0 right-0"
                 >
-                    {!isDark ? "Modo escuro" : "Modo claro"}
+                    {isDark ? "Modo claro" : "Modo escuro"}
                 </motion.span>
                 <motion.div animate={{ x: isDark ? 0 : 110 }}>
                     {isDark ? <MdLightMode className="size-7" /> : <MdDarkMode className="size-7" />}
@@ -35,5 +39,5 @@ export default function DarkMode() {
                 </motion.div>
             </div>
         </button>
-    )
+    );
 }
