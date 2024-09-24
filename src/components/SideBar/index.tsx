@@ -4,13 +4,14 @@ import { BsDiscord, BsGithub, BsInstagram } from "react-icons/bs";
 import { motion } from "framer-motion";
 import SideBarLink from "./Link";
 import DarkMode from "../Mixed/DarkMode";
+import { MdOutlineTimeline } from "react-icons/md";
 
 export default function SideBar() {
     return (
         <>
             <div className="mr-64 tablet:mr-14"></div>
             <motion.section
-                className="flex flex-col gap-1 w-52 tablet:w-auto h-[98vh] m-2 mobile:ml-1 fixed z-30 rounded-lg dark:bg-neutral-800 transition bg-neutral-100 p-6 tablet:p-[2px] shadow-xl"
+                className="flex flex-col gap-1 w-52 m-3 tablet:w-auto h-screen mobile:m-1 fixed z-30 rounded-lg dark:bg-neutral-800 transition bg-neutral-100 p-6 tablet:p-[2px] shadow-xl"
                 initial={{ x: -500 }}
                 animate={{ x: 0 }}
                 transition={{ duration: 0.5 }}
@@ -34,7 +35,7 @@ export default function SideBar() {
                         title="Projetos"
                         key={Math.random()}
                     />
-                    {/* <SideBarLink type="infos" filledIcon={<MdOutlineTimeline fill="#7A53FD" />} href="/timeline" icon={<MdOutlineTimeline />} title="Timeline" key={Math.random()} /> */}
+                    <SideBarLink type="infos" filledIcon={<MdOutlineTimeline fill="#7A53FD" />} href="/timeline" icon={<MdOutlineTimeline />} title="Timeline" key={Math.random()} />
                     <SideBarLink
                         type="infos"
                         filledIcon={<IoPerson fill="#53FDA5" />}
@@ -52,7 +53,7 @@ export default function SideBar() {
                     <SideBarLink icon={<BsInstagram className="group-hover/legal:fill-[#E1306C] transition" />} title="Instagram" type="socials" href="https://www.instagram.com/caiuwu_" key={Math.random()} />
                 </div>
                 <div className="flex w-full justify-center">
-                    <DarkMode/>
+                    <DarkMode />
                 </div>
             </motion.section>
         </>

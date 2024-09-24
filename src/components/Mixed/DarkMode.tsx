@@ -20,7 +20,7 @@ export default function DarkMode() {
     return (
         <button
             onClick={handleThemeChange}
-            className="bg-neutral-100 dark:bg-neutral-900 shadow-sm shadow-neutral-900 rounded-full w-full p-3 tablet:p-2 tablet:w-auto relative tablet:mb-1"
+            className="bg-neutral-100 dark:bg-neutral-900 shadow-sm shadow-neutral-900 rounded-full w-full p-3 tablet:p-2 tablet:w-auto relative tablet:mb-3"
         >
             <div className="tablet:hidden">
                 <motion.span
@@ -29,7 +29,14 @@ export default function DarkMode() {
                 >
                     {isDark ? "Modo claro" : "Modo escuro"}
                 </motion.span>
-                <motion.div animate={{ x: isDark ? 0 : 110 }}>
+                <motion.div animate={{
+                    x: isDark ? 0 : 110,
+                    transition: {
+                        type: "spring",
+                        bounce: 0.3,
+                        duration: 0.4,
+                    }
+                }}>
                     {isDark ? <MdLightMode className="size-7" /> : <MdDarkMode className="size-7" />}
                 </motion.div>
             </div>
