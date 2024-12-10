@@ -4,7 +4,7 @@ import Project from "@/components/Projects/Project";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
+import { Highlight } from "@/components/ui/hero-highlight";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
         const calculateAge = () => {
             const birthdate = new Date(2007, 8, 8);
             const today = new Date();
-            
+
             let age = today.getFullYear() - birthdate.getFullYear();
             const monthDiff = today.getMonth() - birthdate.getMonth();
             const dayDiff = today.getDate() - birthdate.getDate();
@@ -36,13 +36,11 @@ export default function Home() {
                 <meta name="description" content="Um portfolio simples feito por mim mesmo 🗣🔥" />
                 <meta name="og:title" content="Spyei Portfolio" />
                 <meta name="og:description" content="Um portfolio simples feito por mim mesmo 🗣🔥" />
-                <meta name="og:image" content="https://cdn.discordapp.com/avatars/955095844275781693/4007e7943493138d10aeb5d6e64e481c.webp" />
                 <meta property="og:image:type" content="image/png" />
                 <meta property="og:image:width" content="250" />
                 <meta property="og:image:height" content="250" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Spyei Portfolio" />
-                <meta name="twitter:description" content="Um portfolio simples feito por mim mesmo 🗣🔥" />
                 <meta name="twitter:image" content="https://cdn.discordapp.com/avatars/955095844275781693/4007e7943493138d10aeb5d6e64e481c.webp" />
             </Head>
             <div className="w-screen flex justify-center min-h-screen">
@@ -50,8 +48,9 @@ export default function Home() {
                     <div className="flex gap-3 flex-col tablet:px-6">
                         <h1 className="font-bold text-3xl mobile:text-xl">Olá! Meu nome é Caio 👋</h1>
                         <div className="flex gap-1 flex-col">
-                            <p>Tenho {age} anos, e sou um <Highlight>Desenvolvedor Front-end</Highlight> apaixonado por programação, tenho <strong>1 ano de experiência</strong> na área, fazendo freelances e projetos pessoais.</p>
-                            <p>Estou constantemente em busca de aprendizado e aprimoramento dos meus conhecimentos, sempre tentando melhorar a cada dia!</p>
+                            <p>Sou um <Highlight>Desenvolvedor Front-end</Highlight> de 17 anos com paixão por programação e um forte desejo de continuar aprendendo.</p>
+                            <p>Cada desafio é uma oportunidade de crescimento para mim, e estou sempre buscando melhorar minhas habilidades técnicas e interpessoais.</p>
+                            <p>Acredito que a colaboração é essencial para o sucesso. Adoro contribuir para projetos open-source.</p>
                         </div>
                         <Stacks />
                         <div className="flex flex-col gap-1">
