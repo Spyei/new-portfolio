@@ -18,7 +18,7 @@ const data: TimelineEntry[] = [
         title: "2020",
         content: (
             <span>
-                Comecei a desenvolver jogos usando as engines **Construct 2** e **Game Maker**. Embora nenhum dos projetos tenha saído como eu esperava, o
+                Comecei a desenvolver jogos usando as engines <strong>Construct 2</strong> e <strong>Game Maker</strong>. Embora nenhum dos projetos tenha saído como eu esperava, o
                 que mais me motivava era mostrar os resultados para amigos e familiares. Além disso, me divertia bastante desenhando as texturas, criando
                 personagens e inventando histórias para os jogos, nessa engine eu não botava a mão no código, era orientado pela interface gráfica.
             </span>
@@ -39,7 +39,7 @@ const data: TimelineEntry[] = [
         title: "2022",
         content: (
             <span>
-                Após um ano desenvolvendo bots para o Discord, percebi que o aplicativo tinha muitas limitações. Decidi então explorar algo mais avançado e descobri o **JavaScript**.
+                Após um ano desenvolvendo bots para o Discord, percebi que o aplicativo tinha muitas limitações. Decidi então explorar algo mais avançado e descobri o <strong>Javascript</strong>.
                 Com ele, pude criar funcionalidades que antes eram impossíveis no aplicativo de bots. Foi aí que comecei a brincar com JavaScript, criando bots simples e até algumas
                 APIs, mesmo sabendo apenas o essencial para desenvolver esses projetos básicos.
             </span>
@@ -61,7 +61,8 @@ const data: TimelineEntry[] = [
                     versionamento de código especificamente para esse projeto.
                 </p>
 
-                <p>Enfrentei vários desafios, como implementar autenticação para usuários, configurar um proxy reverso, entender sistemas escaláveis e lidar
+                <p>
+                    Enfrentei vários desafios, como implementar autenticação para usuários, configurar um proxy reverso, entender sistemas escaláveis e lidar
                     com diversos aspectos de um projeto em produção. Mesmo começando sem saber muito, cada dificuldade me trouxe novos aprendizados, e o
                     mais importante: eu me divertia desenvolvendo todos os dias.
                 </p>
@@ -69,17 +70,50 @@ const data: TimelineEntry[] = [
         )
     },
     {
-        title: "2023",
+        title: "2024",
         content: (
-            <span>
-                No começo desse ano, meu pai comprou para mim um curso de programação, com toda essa experiencia passada que eu adquiri criando bots para o Discord e jogos, comecei a
-                estudar com HTML e CSS, seguia o curso e colocava os projetos de lá em prática, depois parti para o Javascript DOM, e depois dele foi para o react, foi quando no meio do ano
-                eu decidi criar um projeto real, mesmo não sabendo só o básico de React para criar o site do meu projeto, e um pouco de NodeJS para a API, eu encontrei uma pessoa
-                para me ajudar a criar o projeto, ele fez a api, e eu fiz umas partes da api, como autenticação e etc, ai começamos a criar, foi uma ótima escolha ter criado um projeto que era
-                real, que usuários usassem ele, e que um time fizesse ele, nós usavamos github para versionamento de código, eu aprendi a usar github só para esse projeto, eu passei por vários
-                desafios, de como criar um autenticador para usuários logados, e até fazer um proxy reverso, ou de como funcionava algo escalavel, e várias coisas de um projeto em produção
-                mesmo eu não sabendo de nada no inicio, só pelo fato de eu ter começado esse projeto, eu aprendi diversas coisas, e eu me divertia fazendo ele diariamente.
-            </span>
+            <div className="flex flex-col gap-3">
+                <p>
+                    No início deste ano, eu ainda estava trabalhando em um website que havia criado com meu conhecimento básico de React. Melhorava o código todos os
+                    dias à medida que aprendia algo novo. No entanto, depois de cinco meses no mesmo projeto, percebi que o código não estava nas melhores condições,
+                    já que comecei com pouca experiência tanto em React quanto em boas práticas de programação. Decidi interromper o desenvolvimento, pois estava cada
+                    vez mais difícil progredir com aquela base.
+                </p>
+                <p>
+                    Nos primeiros meses do ano, fiz diversos mini-freelances, criando websites básicos e pequenas APIs para gerar uma renda extra enquanto trabalhava nos meus
+                    projetos pessoais. Ainda nesse período, recebi uma proposta para refazer um site estático, já em produção, utilizando tecnologias mais modernas.
+                    O site antigo era feito em WordPress, e o novo desenvolvimento levou cerca de três meses para ser concluído. Após finalizá-lo, coloquei-o em produção.
+                </p>
+                <p>
+                    Em abril, um amigo me convidou para desenvolver uma dashboard para um projeto que ele havia iniciado. Aceitei o convite, pois estava sem projetos pessoais
+                    no momento, e enxerguei nisso uma oportunidade de aprendizado. No projeto, fui responsável por toda a parte de front-end, incluindo UX, UI, logotipo e design
+                    geral do site. Também contribuí parcialmente no back-end, enquanto meu amigo cuidava da maior parte dessa área.
+                </p>
+                <p>
+                    Infelizmente, tive que abandonar um projeto em que estava envolvido há cinco meses devido a motivos pessoais e questões com a equipe. Nesse projeto, eu cuidava
+                    da dashboard, dos designs e de parte da API. Apesar de não tê-lo finalizado, ele me trouxe muita experiência e uma visão mais ampla sobre o funcionamento do
+                    back-end, área em que eu ainda era iniciante. Foi um aprendizado que me ajudou a lidar melhor com problemas em produção.
+                </p>
+                <p>
+                    No meio do ano, recebi uma proposta para implementar um gateway de pagamentos e um sistema de cadastro de usuários no mesmo website que havia modernizado
+                    anteriormente. Graças à experiência adquirida no projeto anterior com meu amigo, consegui criar uma API robusta, com funcionalidades como autenticação,
+                    cadastro de usuários, integração com banco de dados e gateway de pagamentos. Após entregar essa API, fui contratado como um {`"freelancer fixo"`} por essa
+                    empresa, que ficou satisfeita com o trabalho.
+                </p>
+                <p>
+                    Quase no final do ano, comecei a planejar meu próximo projeto, já desenhando o design do site e definindo como seria o desenvolvimento. Aproveitei que tinha
+                    um tempo livre após concluir outro projeto e comecei a colocar minhas ideias em prática, sempre buscando me manter atualizado e aprimorar minhas habilidades.
+                </p>
+                <p>
+                    Neste ano, recebi várias propostas para trabalhar em projetos como e-commerces, sites de vendas e muitos outros. Alguns consegui aceitar e concluir em uma semana
+                    ou mês; outros tive que recusar devido ao tempo limitado, já que estava no segundo ano do ensino médio. Para otimizar meu tempo, costumava programar no celular
+                    durante intervalos na escola, adiantando trabalho sempre que possível.
+                </p>
+                <p>
+                    No final do ano, iniciei um projeto real com um amigo, focado na venda de serviços, comecei a ler alguns livros de programação como o Código limpo, e percebi o 
+                    quanto eu poderia melhorar nos meus códigos com boas práticas. Além disso, continuei criando websites e APIs como freelancer.
+                </p>
+            </div>
         )
     }
 ];
