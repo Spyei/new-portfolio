@@ -9,12 +9,6 @@ const projects = [
         langs: ["react", "tailwind", "ts"]
     },
     {
-        name: "Postboy",
-        langs: ["next", "tailwind", "ts"],
-        description: "Postboy é um site que faz requisições http para um url.",
-        image: "/postboy/page.png"
-    },
-    {
         name: "Connections",
         langs: ["next", "tailwind", "ts"],
         description: "Connections Dashboard é um website que modifica propriedades do bot e gerencia conexões.",
