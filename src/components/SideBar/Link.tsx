@@ -11,7 +11,7 @@ export default function SideBarLink({ icon, title, href, filledIcon, type }: Lin
     }, []);
 
     return type === "infos" ? (
-        <Link className={`${path === href ? "shadow-lg dark:shadow-neutral-900 text-black dark:text-white" : "hover:text-black dark:hover:text-white"} tablet:justify-center tablet:text-base h-10 flex gap-2 p-4 rounded-lg transition duration-600 items-center text-sm`} href={href}>
+        <Link className={`${path === href ? "shadow-lg dark:shadow-neutral-900 text-black dark:text-white" : "hover:text-black dark:hover:text-white"} tablet:justify-center tablet:text-base h-10 flex gap-2 p-4 rounded-lg transition items-center text-sm`} href={href}>
             {path === href ? filledIcon : icon}
             <span className="tablet:hidden">{title}</span>
         </Link>
