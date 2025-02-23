@@ -51,7 +51,7 @@ export default function SideBar() {
                 <div className="flex flex-col tablet:p-[2px] flex-grow">
                     <SideBarLink icon={<BsGithub className="group-hover/legal:fill-black transition" />} title="Github" type="socials" href="https://github.com/Spyei" key={Math.random()} />
                     <SideBarLink icon={<BsDiscord className="group-hover/legal:fill-[#404EED] transition" />} title="Discord" type="socials" href="https://discord.com/users/955095844275781693" key={Math.random()} />
-                    <SideBarLink icon={<BsInstagram className="group-hover/legal:fill-[#E1306C] transition" />} title="Instagram" type="socials" href="https://www.instagram.com/caiuwu_" key={Math.random()} />
+                    <SideBarLink icon={<BsInstagram className="group-hover/legal:fill-[#E1306C] transition" />} title="Instagram" type="socials" href="https://www.instagram.com/caiodesu_" key={Math.random()} />
                     <SideBarLink icon={<SiAnilist className="group-hover/legal:fill-blue-500 transition" />} title="AniList" type="socials" href="https://anilist.co/user/spyei/" key={Math.random()} />
                     <SideBarLink icon={<FaLastfmSquare className="group-hover/legal:fill-red-500 transition" />} title="LastFm" type="socials" href="https://www.last.fm/user/spyeicaio" key={Math.random()} />                    
                 </div>
