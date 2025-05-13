@@ -7,9 +7,16 @@ import { motion } from "framer-motion";
 import { Highlight } from "@/components/ui/hero-highlight";
 import { useEffect, useState } from "react";
 import { WebsiteCarbonBadge } from 'react-websitecarbon-badge';
+import { useTheme } from "next-themes";
 
 export default function Home() {
     const [age, setAge] = useState(0);
+    const [mounted, setMounted] = useState(false);
+    const { resolvedTheme } = useTheme();
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     useEffect(() => {
         const calculateAge = () => {
@@ -29,6 +36,10 @@ export default function Home() {
 
         setAge(calculateAge());
     }, []);
+
+    if (!mounted) return null;
+
+    const isDark = resolvedTheme === "dark";
 
     return (
         <>
@@ -62,9 +73,7 @@ export default function Home() {
                                 </motion.div>
                             </div>
                         </div>
-                        <div className="flex justify-start">
-                            <WebsiteCarbonBadge dark={true} />
-                        </div>
+                        <WebsiteCarbonBadge co2="0.12" percentage="89" url="https://spyeicaio.vercel.app" dark={isDark} />
                     </div>
                 </div>
             </div>
