@@ -6,6 +6,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Highlight } from "@/components/ui/hero-highlight";
 import { useEffect, useState } from "react";
+import { WebsiteCarbonBadge } from 'react-websitecarbon-badge';
 
 export default function Home() {
     const [age, setAge] = useState(0);
@@ -42,12 +43,12 @@ export default function Home() {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Spyei Portfolio" />
             </Head>
-            <div className="w-screen flex justify-center min-h-screen">
+            <div className="w-screen flex justify-center min-h-screen mb-6">
                 <div className="max-w-[800px] w-full flex pt-16 mobile:pt-6">
                     <div className="flex gap-3 flex-col tablet:px-6">
                         <h1 className="font-bold text-3xl mobile:text-xl">Olá! Meu nome é Caio 👋</h1>
                         <div className="flex gap-1 flex-col">
-                            <p>Sou um <Highlight>Desenvolvedor Front-end</Highlight> de 17 anos com paixão por programação e um forte desejo de continuar aprendendo.</p>
+                            <p>Sou um <Highlight>Desenvolvedor FullStack</Highlight> de {age} anos com paixão por programação e um forte desejo de continuar aprendendo.</p>
                             <p>Cada desafio é uma oportunidade de crescimento para mim, e estou sempre buscando melhorar minhas habilidades técnicas e interpessoais.</p>
                             <p>Acredito que a colaboração é essencial para o sucesso. Adoro contribuir para projetos open-source.</p>
                         </div>
@@ -60,6 +61,9 @@ export default function Home() {
                                     <Project name="Connections" langs={["next", "tailwind", "ts"]} description="Connections Dashboard é um website que modifica propriedades do bot e gerencia conexões." image="/connections/page.png" key={Math.random()} />
                                 </motion.div>
                             </div>
+                        </div>
+                        <div className="flex justify-start">
+                            <WebsiteCarbonBadge dark={true} />
                         </div>
                     </div>
                 </div>
