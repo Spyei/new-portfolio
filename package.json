@@ -10,6 +10,7 @@
 		"format": "biome format --write"
 	},
 	"dependencies": {
+		"framer-motion": "^12.35.2",
 		"next": "16.1.6",
 		"postcss": "^8.5.8",
 		"react": "19.2.4",
