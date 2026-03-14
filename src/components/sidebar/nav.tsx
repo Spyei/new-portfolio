@@ -43,7 +43,7 @@ export default function Nav() {
 	}, [pathname]);
 
 	return (
-		<div className="relative flex flex-col gap-1">
+		<div className="relative flex flex-col gap-2 md:gap-1">
 			{pillStyle && (
 				<motion.div
 					className="absolute left-0 right-0 bg-background rounded-xl z-0"

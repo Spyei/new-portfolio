@@ -25,12 +25,14 @@ export default function Option({
 				target="_blank"
 				rel="noreferrer"
 				href={href}
-				className="relative flex gap-2 cursor-pointer transition rounded-xl p-2 px-3 group"
+				className="relative flex gap-2 cursor-pointer transition rounded-xl p-2 px-3 group md:w-39"
 			>
-				{icon}
-				<div className="relative hidden md:inline">
-					{title}
-					<span className="absolute bottom-0 left-0 w-0 h-px bg-background transition-all duration-300 group-hover:w-full" />
+				<div className="flex gap-2 items-center">
+					{icon}
+					<div className="relative hidden md:inline">
+						{title}
+						<span className="absolute bottom-0 left-0 w-0 h-px bg-background transition-all duration-300 group-hover:w-full" />
+					</div>
 				</div>
 				<ArrowUpRight
 					className="mt-1 group-hover:mt-0 group-hover:ml-1 transition-all hidden md:inline"

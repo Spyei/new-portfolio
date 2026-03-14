@@ -16,7 +16,7 @@ export default function Sidebar() {
 			transition={{ duration: 0.3 }}
 		>
 			<Notch />
-			<section className="absolute inset-8 left-0 md:w-52 w-16 flex flex-col gap-4 md:p-6 p-1 items-center z-50 text-background overflow-hidden">
+			<section className="absolute inset-8 left-0 md:w-52 w-16 flex flex-col gap-4 md:p-6 p-1 items-center md:items-start z-50 text-background overflow-hidden">
 				<div className="flex flex-col gap-4 h-full overflow-hidden">
 					<h1 className="font-bold font-grotesk md:text-xl text-[1px] invisible md:visible">
 						Informações
