@@ -13,7 +13,7 @@ export default function Technologies({ isFirstVisit, firstVisitDelay }: HomeCont
 		>
 			<Title>Tecnologias</Title>
 			<span>Linguagens e ferramentas que uso no dia a dia.</span>
-			<ul className="grid grid-cols-3 gap-4 mt-4">
+			<ul className="grid md:grid-cols-3 sm:grid-cols-2 gap-4 mt-4">
 				{Object.entries(technologies).map(
 					([name, { shadow, icon }], index) => (
 						<TechnologyCard

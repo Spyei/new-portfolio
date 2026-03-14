@@ -16,14 +16,17 @@ export default function Sidebar() {
 			transition={{ duration: 0.3 }}
 		>
 			<Notch />
-			<section className="absolute inset-8 left-0 w-52 flex flex-col gap-4 p-6 z-50 text-background overflow-hidden">
+			<section className="absolute inset-8 left-0 md:w-52 w-16 flex flex-col gap-4 md:p-6 p-1 items-center z-50 text-background overflow-hidden">
 				<div className="flex flex-col gap-4 h-full overflow-hidden">
-					<h1 className="font-bold font-grotesk text-xl">
+					<h1 className="font-bold font-grotesk md:text-xl text-[1px] invisible md:visible">
 						Informações
 					</h1>
 					<Nav />
-					<h1 className="font-bold font-grotesk text-xl">Links</h1>
-					<div className="flex flex-col gap-1 overflow-y-auto flex-1 sidebar-scroll">
+					<h1 className="font-bold font-grotesk text-xl hidden md:inline">
+						Links
+					</h1>
+					<div className="md:hidden inline h-0.5 rounded-full w-full bg-background" />
+					<div className="flex flex-col md:gap-1 gap-2 overflow-y-auto flex-1 sidebar-scroll">
 						<Option
 							link
 							href="https://github.com/spyei"

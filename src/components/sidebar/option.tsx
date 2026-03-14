@@ -28,12 +28,12 @@ export default function Option({
 				className="relative flex gap-2 cursor-pointer transition rounded-xl p-2 px-3 group"
 			>
 				{icon}
-				<div className="relative">
+				<div className="relative hidden md:inline">
 					{title}
 					<span className="absolute bottom-0 left-0 w-0 h-px bg-background transition-all duration-300 group-hover:w-full" />
 				</div>
 				<ArrowUpRight
-					className="mt-1 group-hover:mt-0 group-hover:ml-1 transition-all"
+					className="mt-1 group-hover:mt-0 group-hover:ml-1 transition-all hidden md:inline"
 					size={15}
 				/>
 			</a>
@@ -45,7 +45,7 @@ export default function Option({
 			className={`relative flex gap-2 cursor-pointer transition rounded-xl p-2.5 px-3 z-10
     ${isActive ? "text-secondary" : "text-background"}`}
 		>
-			<motion.span
+			<motion.div
 				className="flex gap-2 items-center"
 				animate={{
 					color: isActive ? "var(--secondary)" : "var(--background)",
@@ -53,8 +53,8 @@ export default function Option({
 				transition={{ type: "spring", stiffness: 500, damping: 30 }}
 			>
 				{icon}
-				{title}
-			</motion.span>
+				<span className="hidden md:inline">{title}</span>
+			</motion.div>
 		</Link>
 	);
 }

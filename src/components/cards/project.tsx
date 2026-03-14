@@ -41,7 +41,7 @@ export default function ProjectCard({
 			>
 				<div className="flex flex-col gap-1">
 					<div className="flex gap-2">
-						<h1 className="font-grotesk font-semibold text-2xl relative">
+						<h1 className="font-grotesk font-semibold md:text-2xl text-xl relative">
 							{project?.name}
 							<span className="absolute bottom-0 left-0 w-0 h-px bg-secondary transition-all duration-300 group-hover:w-full" />
 						</h1>
@@ -50,9 +50,9 @@ export default function ProjectCard({
 							size={15}
 						/>
 					</div>
-					<span>{project.cardDescription}</span>
+					<span className="text-sm sm:text-base">{project.cardDescription}</span>
 				</div>
-				<div className="flex">
+				<div className="flex flex-col md:flex-row gap-2">
 					<ul className="flex gap-2 grow">
 						{project.technologies.map((technology) => (
 							<li key={technology}>

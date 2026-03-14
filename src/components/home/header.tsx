@@ -9,7 +9,7 @@ export default function Header({ isFirstVisit, firstVisitDelay }: HomeContextPro
 			{...springElement(0.9, firstVisitDelay(1.1, 0.1, isFirstVisit))}
 			className="flex flex-col gap-3"
 		>
-			<h1 className="font-grotesk font-semibold text-5xl">
+			<h1 className="font-grotesk font-semibold md:text-5xl text-3xl">
 				Olá, Eu me chamo Caio
 			</h1>
 			<div>
