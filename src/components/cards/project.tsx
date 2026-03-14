@@ -33,7 +33,7 @@ export default function ProjectCard({
 				0.9,
 				firstVisitDelay(delays[0], delays[1], isFirstVisit),
 			)}
-			className="w-full shadow-lg bg-card border-border rounded-xl p-6 gap-3 cursor-pointer group hover:shadow-neutral-900 transition-shadow"
+			className="w-full shadow-lg bg-card border-border border rounded-xl p-6 gap-3 cursor-pointer group hover:shadow-neutral-900 transition-shadow"
 		>
 			<Link
 				className="flex flex-col gap-3"
@@ -50,9 +50,14 @@ export default function ProjectCard({
 							size={15}
 						/>
 					</div>
-					<span className="text-sm sm:text-base">{project.cardDescription}</span>
+					<span className="mt-2 text-sm text-secondary/70">
+						{project.role}
+					</span>
+					<span className="text-sm sm:text-base">
+						{project.cardDescription}
+					</span>
 				</div>
-				<div className="flex flex-col md:flex-row gap-2">
+				<div className="flex flex-col md:flex-row gap-2 mt-2">
 					<ul className="flex gap-2 grow">
 						{project.technologies.map((technology) => (
 							<li key={technology}>

@@ -7,11 +7,14 @@ interface Props extends HomeContextProps {
 	shadow: string;
 	icon: ReactNode;
     index: number;
+	href: string;
 }
 
-export default function TechnologyCard({ name, shadow, icon, index, isFirstVisit, firstVisitDelay }: Props) {
+export default function TechnologyCard({ name, shadow, icon, index, isFirstVisit, firstVisitDelay, href }: Props) {
 	return (
-		<motion.li
+		<motion.a
+			href={href}
+			target="_blank"
 			initial={{ opacity: 0, scale: 0.8 }}
 			animate={{ opacity: 1, scale: 1 }}
 			transition={{
@@ -22,10 +25,10 @@ export default function TechnologyCard({ name, shadow, icon, index, isFirstVisit
 				damping: 20,
 			}}
 			key={name}
-			className={`flex gap-2 items-center p-4 bg-card ${shadow} shadow-sm hover:shadow-md transition-shadow border-border border rounded-xl`}
+			className={`flex cursor-pointer gap-2 items-center p-4 bg-card ${shadow} shadow-sm hover:shadow-md transition-shadow border-border border rounded-xl`}
 		>
 			{icon}
 			<span>{name}</span>
-		</motion.li>
+		</motion.a>
 	);
 }

@@ -12,7 +12,7 @@ export default function ActualProject({ isFirstVisit, firstVisitDelay }: HomeCon
 		>
 			<Title>Projeto Atual</Title>
 			<span className="mb-4">No que estou trabalhando agora.</span>
-			<ProjectCard firstVisitDelay={firstVisitDelay} isFirstVisit={isFirstVisit} id="connections" index={0} />
+			<ProjectCard firstVisitDelay={firstVisitDelay} isFirstVisit={isFirstVisit} index={0} />
 		</motion.div>
 	);
 }

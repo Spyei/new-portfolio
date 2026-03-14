@@ -73,7 +73,7 @@ export default function Input({
 			<div className="flex flex-col gap-2">
 				<label
 					htmlFor={id}
-					className="font-grotesk font-semibold text-xl ml-1"
+					className="font-grotesk font-semibold text-lg md:text-xl ml-1"
 				>
 					{label}
 				</label>

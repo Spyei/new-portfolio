@@ -15,8 +15,9 @@ export default function Technologies({ isFirstVisit, firstVisitDelay }: HomeCont
 			<span>Linguagens e ferramentas que uso no dia a dia.</span>
 			<ul className="grid md:grid-cols-3 sm:grid-cols-2 gap-4 mt-4">
 				{Object.entries(technologies).map(
-					([name, { shadow, icon }], index) => (
+					([name, { shadow, icon, href }], index) => (
 						<TechnologyCard
+							href={href}
 							firstVisitDelay={firstVisitDelay}
 							isFirstVisit={isFirstVisit}
 							key={name}
