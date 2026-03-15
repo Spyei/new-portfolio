@@ -1,6 +1,9 @@
 "use client";
 
-import { GithubOriginalIcon, LinkedinOriginalIcon } from "@devicon/react";
+import {
+	GithubOriginalIcon,
+	LinkedinPlainIcon,
+} from "@devicon/react";
 import Notch from "./notch";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -31,13 +34,17 @@ export default function Sidebar() {
 							link
 							href="https://github.com/spyei"
 							title="GitHub"
-							icon={<GithubOriginalIcon size={20} />}
+							icon={
+								<GithubOriginalIcon color="#212121" size={20} />
+							}
 						/>
 						<Option
 							link
 							href="https://www.linkedin.com/in/spyei"
 							title="LinkedIn"
-							icon={<LinkedinOriginalIcon size={20} />}
+							icon={
+								<LinkedinPlainIcon color="#212121" size={20} />
+							}
 						/>
 						<Option
 							link
@@ -45,7 +52,7 @@ export default function Sidebar() {
 							title="Instagram"
 							icon={
 								<Image
-									src="/icons/instagram.svg"
+									src="/icons/instagramc.svg"
 									alt="Instagram icon"
 									width={20}
 									height={20}
@@ -58,7 +65,7 @@ export default function Sidebar() {
 							title="Last.fm"
 							icon={
 								<Image
-									src="/icons/lastfm.svg"
+									src="/icons/lastfmc.svg"
 									alt="Last.fm icon"
 									width={20}
 									height={20}
@@ -70,14 +77,12 @@ export default function Sidebar() {
 							href="https://anilist.co/user/spyei"
 							title="AniList"
 							icon={
-								<div className="bg-background rounded-sm pt-0.5">
-									<Image
-										src="/icons/anilist.svg"
-										alt="AniList icon"
-										width={20}
-										height={20}
-									/>
-								</div>
+								<Image
+									src="/icons/anilistc.svg"
+									alt="AniList icon"
+									width={20}
+									height={20}
+								/>
 							}
 						/>
 					</div>
