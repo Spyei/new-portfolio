@@ -1,19 +1,19 @@
+"use client";
+
 import type { experiences } from "@/utils/experiences";
-import type { HomeContextProps } from "../home";
-import { springElement } from "@/utils/animations";
+import { firstVisitDelay, springElement } from "@/utils/animations";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { technologies } from "@/utils/technologies";
+import { useFirstVisit } from "@/hooks/useFirstVisit";
 
-interface Props extends HomeContextProps {
+interface Props {
 	experience: (typeof experiences)[0];
 }
 
-export default function ExperienceCard({
-	experience,
-	firstVisitDelay,
-	isFirstVisit,
-}: Props) {
+export default function ExperienceCard({ experience }: Props) {
+	const isFirstVisit = useFirstVisit();
+
 	return (
 		<motion.div
 			{...springElement(
@@ -28,7 +28,7 @@ export default function ExperienceCard({
 		>
 			<div>
 				<Image
-					className="rounded-lg"
+					className="rounded-lg w-full h-auto max-w-[320px] min-w-17.5"
 					width={320}
 					height={320}
 					src={experience.logo}
@@ -44,7 +44,7 @@ export default function ExperienceCard({
 					<span className="text-secondary/70">{experience.type}</span>
 					<span className="text-secondary/70">{experience.time}</span>
 				</div>
-				<div className="my-2">{experience.description}</div>
+				<div className="my-2 mb-3">{experience.description}</div>
 				<div className="flex gap-2">
 					{experience.technologies.map((technology) => (
 						<li key={technology}>

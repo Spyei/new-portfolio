@@ -1,12 +1,14 @@
-import { springElement } from "@/utils/animations";
+"use client";
+
+import { firstVisitDelay, springElement } from "@/utils/animations";
 import { projects } from "@/utils/projects";
 import { technologies } from "@/utils/technologies";
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-import type { HomeContextProps } from "../home";
+import { useFirstVisit } from "@/hooks/useFirstVisit";
+import HighlightLink from "../ui/highlightLink";
 
-interface Props extends HomeContextProps {
+interface Props {
 	id?: string;
 	index: number;
 	page?: boolean;
@@ -15,10 +17,10 @@ interface Props extends HomeContextProps {
 export default function ProjectCard({
 	id,
 	index,
-	isFirstVisit,
-	firstVisitDelay,
 	page,
 }: Props) {
+	const isFirstVisit = useFirstVisit();
+
 	const project = id
 		? projects.find((project) => project.id === id)
 		: projects[0];
@@ -40,16 +42,7 @@ export default function ProjectCard({
 				href={`/projetos/${project.id}`}
 			>
 				<div className="flex flex-col gap-1">
-					<div className="flex gap-2">
-						<h1 className="font-grotesk font-semibold md:text-2xl text-xl relative">
-							{project?.name}
-							<span className="absolute bottom-0 left-0 w-0 h-px bg-secondary transition-all duration-300 group-hover:w-full" />
-						</h1>
-						<ArrowUpRight
-							className="mt-2 group-hover:mt-1 group-hover:ml-1 transition-all"
-							size={15}
-						/>
-					</div>
+					<HighlightLink label={project.name} />
 					<span className="mt-2 text-sm text-secondary/70">
 						{project.role}
 					</span>
