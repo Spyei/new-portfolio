@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useRef, useState, useEffect } from "react";
-import { Briefcase, FolderOpen, House, UserRound } from "lucide-react";
+import { Briefcase, FolderOpen, GraduationCap, House, UserRound } from "lucide-react";
 import Option from "./option";
 import { useFirstVisit } from "@/hooks/useFirstVisit";
 
@@ -10,6 +10,7 @@ const routes = [
 	{ href: "/", title: "Início", icon: <House size={20} /> },
 	{ href: "/projetos", title: "Projetos", icon: <FolderOpen size={20} /> },
     { href: "/experiencia", title: "Experiência", icon: <Briefcase size={20} /> },
+	{ href: "/educacao", title: "Educação", icon: <GraduationCap size={20} /> },
 	{ href: "/contato", title: "Contato", icon: <UserRound size={20} /> },
 ];
 
