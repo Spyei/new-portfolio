@@ -16,7 +16,7 @@ interface Props {
 }
 
 const baseClass =
-	"p-4 border-border border transition rounded-xl shadow-md bg-card focus:outline-0";
+	"p-4 border-border border transition rounded-2xl shadow-md bg-card focus:outline-0";
 
 export default function Input({
 	index,

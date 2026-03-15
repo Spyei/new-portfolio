@@ -25,7 +25,7 @@ export default function TechnologyCard({ name, shadow, icon, index, isFirstVisit
 				damping: 20,
 			}}
 			key={name}
-			className={`flex cursor-pointer gap-2 items-center p-4 bg-card ${shadow} shadow-sm hover:shadow-md transition-shadow border-border border rounded-xl`}
+			className={`flex cursor-pointer gap-2 items-center p-4 bg-card ${shadow} shadow-sm hover:shadow-md transition-shadow border-border border rounded-2xl`}
 		>
 			{icon}
 			<span>{name}</span>

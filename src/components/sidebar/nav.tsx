@@ -46,7 +46,7 @@ export default function Nav() {
 		<div className="relative flex flex-col gap-2 md:gap-1">
 			{pillStyle && (
 				<motion.div
-					className="absolute left-0 right-0 bg-background rounded-xl z-0"
+					className="absolute left-0 right-0 bg-background rounded-2xl z-0"
 					style={{ transformOrigin: "50% 50%" }}
 					initial={
 						isFirstVisit
