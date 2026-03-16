@@ -28,7 +28,7 @@ export default function ExperienceCard({ experience }: Props) {
 		>
 			<div>
 				<Image
-					className="rounded-lg w-full h-auto max-w-[320px] min-w-17.5"
+					className="rounded-lg w-full h-auto max-w-[320px] min-w-12"
 					width={320}
 					height={320}
 					src={experience.logo}

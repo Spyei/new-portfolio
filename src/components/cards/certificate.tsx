@@ -35,7 +35,7 @@ export default function CertificateCard({ certificate }: Props) {
 			>
 				<div className="mr-2">
 					<Image
-						className="rounded-lg w-full h-auto max-w-20 min-w-17.5"
+						className="rounded-lg w-full h-auto max-w-20 min-w-12"
 						width={320}
 						height={320}
 						src={certificate.logo}
