@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useFirstVisit } from "@/hooks/useFirstVisit";
 import HighlightLink from "../ui/highlightLink";
+import Image from "next/image";
 
 interface Props {
 	id?: string;
@@ -14,11 +15,7 @@ interface Props {
 	page?: boolean;
 }
 
-export default function ProjectCard({
-	id,
-	index,
-	page,
-}: Props) {
+export default function ProjectCard({ id, index, page }: Props) {
 	const isFirstVisit = useFirstVisit();
 
 	const project = id
@@ -35,8 +32,17 @@ export default function ProjectCard({
 				0.9,
 				firstVisitDelay(delays[0], delays[1], isFirstVisit),
 			)}
-			className="w-full shadow-lg bg-card border-border border rounded-2xl p-6 gap-3 cursor-pointer group hover:shadow-neutral-900 transition-shadow"
+			className="w-full flex shadow-lg bg-card border-border border rounded-2xl p-6 gap-5 cursor-pointer group hover:shadow-neutral-900 transition-shadow"
 		>
+			<div className="md:w-20 md:h-20 w-12 h-12">
+				<Image
+					className="rounded-lg object-cover w-full h-full md:min-w-20 min-w-12"
+					width={64}
+					height={64}
+					src={project.icon}
+					alt={project.name}
+				/>
+			</div>
 			<Link
 				className="flex flex-col gap-3"
 				href={`/projetos/${project.id}`}
