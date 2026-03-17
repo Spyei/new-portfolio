@@ -1,13 +1,12 @@
 "use client";
-
 import { firstVisitDelay, springElement } from "@/utils/animations";
 import { projects } from "@/utils/projects";
 import { technologies } from "@/utils/technologies";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { useFirstVisit } from "@/hooks/useFirstVisit";
 import HighlightLink from "../ui/highlightLink";
 import Image from "next/image";
+import { GithubOriginalIcon } from "@devicon/react";
 
 interface Props {
 	id?: string;
@@ -17,7 +16,6 @@ interface Props {
 
 export default function ProjectCard({ id, index, page }: Props) {
 	const isFirstVisit = useFirstVisit();
-
 	const project = id
 		? projects.find((project) => project.id === id)
 		: projects[0];
@@ -32,7 +30,7 @@ export default function ProjectCard({ id, index, page }: Props) {
 				0.9,
 				firstVisitDelay(delays[0], delays[1], isFirstVisit),
 			)}
-			className="w-full flex shadow-lg bg-card border-border border rounded-2xl p-6 gap-5 cursor-pointer group hover:shadow-neutral-900 transition-shadow"
+			className="w-full flex shadow-lg bg-card border-border border rounded-2xl p-6 gap-5 hover:shadow-neutral-900 transition-shadow"
 		>
 			<div className="md:w-20 md:h-20 w-12 h-12">
 				<Image
@@ -43,11 +41,14 @@ export default function ProjectCard({ id, index, page }: Props) {
 					alt={project.name}
 				/>
 			</div>
-			<Link
-				className="flex flex-col gap-3"
-				href={`/projetos/${project.id}`}
-			>
-				<div className="flex flex-col gap-1">
+
+			<div className="flex flex-col gap-3 grow">
+				<a
+					href={project.website}
+					target="_blank"
+					rel="noopener noreferrer"
+					className="flex flex-col gap-1 group"
+				>
 					<HighlightLink label={project.name} />
 					<span className="mt-2 text-sm text-secondary/70">
 						{project.role}
@@ -55,7 +56,8 @@ export default function ProjectCard({ id, index, page }: Props) {
 					<span className="text-sm sm:text-base">
 						{project.cardDescription}
 					</span>
-				</div>
+				</a>
+
 				<div className="flex flex-col md:flex-row gap-2 mt-2">
 					<ul className="flex gap-2 grow">
 						{project.technologies.map((technology) => (
@@ -64,13 +66,29 @@ export default function ProjectCard({ id, index, page }: Props) {
 							</li>
 						))}
 					</ul>
-					<div className="flex flex-col gap-1">
+					<div className="flex gap-2 items-center">
+						{project.github && (
+							<motion.a
+								whileHover={{
+									scale: 1.1,
+									transition: {
+										duration: 0.09,
+									},
+								}}
+								href={project.github}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-secondary/50 hover:text-secondary transition-colors"
+							>
+								<GithubOriginalIcon color="#F9F8F0" size={22} />
+							</motion.a>
+						)}
 						<span className="italic text-sm">
 							{project.development}
 						</span>
 					</div>
 				</div>
-			</Link>
+			</div>
 		</motion.div>
 	);
 }
