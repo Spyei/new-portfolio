@@ -3,6 +3,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Sidebar from "@/components/sidebar";
 import Head from "next/head";
+import { I18nProvider } from "@/contexts/i18n";
+import { ThemeProvider } from "@/contexts/theme";
 
 export const metadata: Metadata = {
 	title: "Portfolio",
@@ -29,12 +31,16 @@ export default function RootLayout({
 				/>
 			</Head>
 			<body
-				className={`font-sans antialiased bg-background text-secondary dark`}
+				className="font-sans antialiased bg-background text-secondary transition-colors duration-200"
 			>
-				<Sidebar />
-				<main className="md:ml-56 ml-16 flex-1 p-4">
-					<div className="max-w-3xl mx-auto">{children}</div>
-				</main>
+				<I18nProvider>
+					<ThemeProvider>
+						<Sidebar />
+						<main className="md:ml-56 ml-16 flex-1 p-4">
+							<div className="max-w-3xl mx-auto">{children}</div>
+						</main>
+					</ThemeProvider>
+				</I18nProvider>
 			</body>
 		</html>
 	);
