@@ -7,7 +7,7 @@ const staticEducation = {
 			id: 0,
 			name: "CS50's Web Programming",
 			company: "Harvard University",
-			logo: "/education/harvard.jpg",
+			logo: "/education/harvard.png",
 			url: "https://certificates.cs50.io/0a19600d-14a9-45a6-a6c3-1592b3ebf3cb.pdf?size=letter",
 			code: "0a19600d-14a9-45a6-a6c3-1592b3ebf3cb",
 		},
@@ -16,7 +16,7 @@ const staticEducation = {
 		{
 			id: 0,
 			name: "Estácio",
-			logo: "/education/estacio.jpeg",
+			logo: "/education/estacio.png",
 			url: "https://estacio.br",
 		},
 	],
