@@ -6,22 +6,25 @@ import PageContainer from "@/components/ui/pageContainer";
 import Title from "@/components/ui/title";
 import { useFirstVisit } from "@/hooks/useFirstVisit";
 import { firstVisitDelay, springElement } from "@/utils/animations";
-import { education } from "@/utils/education";
+import { getEducation } from "@/utils/education";
+import { useI18n } from "@/contexts/i18n";
 import { motion } from "framer-motion";
 
-export default function Experiencia() {
+export default function Educacao() {
 	const isFirstVisit = useFirstVisit();
+	const { t, locale } = useI18n();
+	const education = getEducation(locale);
 
 	return (
 		<PageContainer
-			title="Educação"
-			description="Minha educação e formação acadêmica."
+			title={t.education.title}
+			description={t.education.description}
 		>
 			<ul className="mt-4">
-				{education.universities.map((certificate) => (
+				{education.universities.map((university) => (
 					<EducationCard
-						key={certificate.id}
-						certificate={certificate}
+						key={university.id}
+						certificate={university}
 					/>
 				))}
 			</ul>
@@ -29,8 +32,8 @@ export default function Experiencia() {
 				{...springElement(0.9, firstVisitDelay(1.6, 0.5, isFirstVisit))}
 				className="flex flex-col gap-2 mt-4"
 			>
-				<Title>Certificados</Title>
-				<span>Minhas certificações e diplomas.</span>
+				<Title>{t.education.certificates.title}</Title>
+				<span>{t.education.certificates.description}</span>
 				<ul className="flex flex-col gap-4 mt-4">
 					{education.certificates.map((certificate) => (
 						<CertificateCard

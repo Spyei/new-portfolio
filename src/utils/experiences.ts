@@ -1,13 +1,26 @@
-export const experiences = [
+import ptData from "../../public/locales/pt.json";
+import enData from "../../public/locales/en.json";
+
+const staticExperiences = [
 	{
 		id: 0,
-		role: "Desenvolvedor Full Stack",
 		company: "Plataforma Astra",
 		logo: "/experiences/astra.png",
-		time: "Abril, 2024 - Atual",
-		type: "Freelance, Remoto",
 		technologies: ["Next.js", "TypeScript", "Node.js", "Tailwindcss"],
-		description:
-			"Reescrita de sistema legado (WordPress → Next.js) elevando o Core Web Vitals de ~55 para 99 pontos. Desenvolvimento full stack com Node.js, APIs REST, autenticação e dashboards administrativos. Deploy automatizado via GitHub Actions e Vercel.",
 	},
 ];
+
+export function getExperiences(locale: "pt" | "en") {
+	const translations =
+		locale === "pt" ? ptData.data.experiences : enData.data.experiences;
+
+	return staticExperiences.map((e) => ({
+		...e,
+		...translations.find((t) => t.id === e.id),
+	}));
+}
+
+export const experiences = staticExperiences.map((e) => ({
+	...e,
+	...ptData.data.experiences.find((t) => t.id === e.id),
+}));

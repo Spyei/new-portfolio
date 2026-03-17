@@ -12,29 +12,41 @@ export interface ContactFormErrors {
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-export function validateContactForm(data: ContactFormData): ContactFormErrors {
-	const errors: ContactFormErrors = {};
+interface ValidatorMessages {
+	nameRequired: string;
+	nameMaxLength: string;
+	emailRequired: string;
+	emailInvalid: string;
+	emailMaxLength: string;
+	messageRequired: string;
+	messageMaxLength: string;
+}
 
+export function validateContactForm(
+	data: ContactFormData,
+	messages: ValidatorMessages,
+): ContactFormErrors {
+	const errors: ContactFormErrors = {};
 	const { name, email, message } = data;
 
 	if (!name.trim()) {
-		errors.name = "Lembre-se de preencher o nome";
+		errors.name = messages.nameRequired;
 	} else if (name.length > 50) {
-		errors.name = "O nome deve conter no máximo 50 caracteres";
+		errors.name = messages.nameMaxLength;
 	}
 
 	if (!email.trim()) {
-		errors.email = "Lembre-se de preencher o e-mail";
+		errors.email = messages.emailRequired;
 	} else if (!EMAIL_REGEX.test(email)) {
-		errors.email = "Certifique-se de fornecer um e-mail válido";
+		errors.email = messages.emailInvalid;
 	} else if (email.length > 255) {
-		errors.email = "O e-mail deve conter no máximo 255 caracteres";
+		errors.email = messages.emailMaxLength;
 	}
 
 	if (!message.trim()) {
-		errors.message = "Lembre-se de preencher a mensagem";
+		errors.message = messages.messageRequired;
 	} else if (message.length > 500) {
-		errors.message = "A mensagem deve conter no máximo 500 caracteres";
+		errors.message = messages.messageMaxLength;
 	}
 
 	return errors;

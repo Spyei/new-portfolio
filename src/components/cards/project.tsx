@@ -1,12 +1,14 @@
 "use client";
+
 import { firstVisitDelay, springElement } from "@/utils/animations";
-import { projects } from "@/utils/projects";
+import { getProjects } from "@/utils/projects";
 import { technologies } from "@/utils/technologies";
 import { motion } from "framer-motion";
 import { useFirstVisit } from "@/hooks/useFirstVisit";
 import HighlightLink from "../ui/highlightLink";
 import Image from "next/image";
 import { GithubOriginalIcon } from "@devicon/react";
+import { useI18n } from "@/contexts/i18n";
 
 interface Props {
 	id?: string;
@@ -16,6 +18,9 @@ interface Props {
 
 export default function ProjectCard({ id, index, page }: Props) {
 	const isFirstVisit = useFirstVisit();
+	const { locale } = useI18n();
+	const projects = getProjects(locale);
+
 	const project = id
 		? projects.find((project) => project.id === id)
 		: projects[0];
@@ -30,7 +35,7 @@ export default function ProjectCard({ id, index, page }: Props) {
 				0.9,
 				firstVisitDelay(delays[0], delays[1], isFirstVisit),
 			)}
-			className="w-full flex shadow-lg bg-card border-border border rounded-2xl p-6 gap-5 hover:shadow-neutral-900 transition-shadow"
+			className="w-full flex shadow-lg bg-card border-border border rounded-2xl p-6 gap-5 hover:shadow-xl transition-shadow"
 		>
 			<div className="md:w-20 md:h-20 w-12 h-12">
 				<Image

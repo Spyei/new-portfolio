@@ -4,11 +4,13 @@ import { firstVisitDelay, springElement } from "@/utils/animations";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useFirstVisit } from "@/hooks/useFirstVisit";
-import type { education } from "@/utils/education";
+import type { getEducation } from "@/utils/education";
 import HighlightLink from "../ui/highlightLink";
 
+type University = ReturnType<typeof getEducation>["universities"][0];
+
 interface Props {
-	certificate: (typeof education.universities)[0];
+	certificate: University;
 }
 
 export default function EducationCard({ certificate }: Props) {
@@ -24,7 +26,7 @@ export default function EducationCard({ certificate }: Props) {
 					isFirstVisit,
 				),
 			)}
-			className="w-full shadow-lg bg-card border-border border rounded-2xl p-6 gap-1 group cursor-pointer hover:shadow-neutral-900 transition-shadow"
+			className="w-full shadow-lg bg-card border-border border rounded-2xl p-6 gap-1 group cursor-pointer hover:shadow-xl transition-shadow"
 		>
 			<a
 				target="_blank"

@@ -4,16 +4,19 @@ import { firstVisitDelay, springElement } from "@/utils/animations";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useFirstVisit } from "@/hooks/useFirstVisit";
-import type { education } from "@/utils/education";
+import type { getEducation } from "@/utils/education";
 import HighlightLink from "../ui/highlightLink";
-import { Award, AwardIcon } from "lucide-react";
+import { useI18n } from "@/contexts/i18n";
+
+type Certificate = ReturnType<typeof getEducation>["certificates"][0];
 
 interface Props {
-	certificate: (typeof education.certificates)[0];
+	certificate: Certificate;
 }
 
 export default function CertificateCard({ certificate }: Props) {
 	const isFirstVisit = useFirstVisit();
+	const { t } = useI18n();
 
 	return (
 		<motion.div
@@ -25,7 +28,7 @@ export default function CertificateCard({ certificate }: Props) {
 					isFirstVisit,
 				),
 			)}
-			className="w-full shadow-lg bg-card border-border border rounded-2xl p-6 gap-1 group cursor-pointer hover:shadow-neutral-900 transition-shadow"
+			className="w-full shadow-lg bg-card border-border border rounded-2xl p-6 gap-1 group cursor-pointer hover:shadow-xl transition-shadow"
 		>
 			<a
 				target="_blank"
@@ -44,12 +47,14 @@ export default function CertificateCard({ certificate }: Props) {
 				</div>
 				<div className="flex flex-col gap-1">
 					<HighlightLink label={certificate.name} />
-                    <span>{certificate.company}</span>
+					<span>{certificate.company}</span>
 					<div className="flex flex-col gap-1 text-sm text-secondary/70">
 						<span>
-							Emitido em {certificate.time}
+							{t.education.issuedAt} {certificate.time}
 						</span>
-                        <span>Código da credencial {certificate.code}</span>
+						<span>
+							{t.education.credentialCode} {certificate.code}
+						</span>
 					</div>
 				</div>
 			</a>

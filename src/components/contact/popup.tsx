@@ -1,5 +1,8 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { CheckCircle2, X, XCircle } from "lucide-react";
+import { useI18n } from "@/contexts/i18n";
 
 export default function PopUp({
 	status,
@@ -8,25 +11,27 @@ export default function PopUp({
 	status: "success" | "error";
 	setStatus: (status: "idle") => void;
 }) {
+	const { t } = useI18n();
+
 	const component =
 		status === "success" ? (
 			<div className="flex gap-1 items-center flex-col">
 				<CheckCircle2 size={60} className="text-green-500 mb-2" />
 				<h1 className="font-grotesk text-2xl font-bold">
-					Mensagem Enviada!
+					{t.contact.popup.successTitle}
 				</h1>
 				<span className="text-sm max-w-72 text-center">
-					Recebi sua mensagem e entrarei em contato em breve.
+					{t.contact.popup.successDesc}
 				</span>
 			</div>
 		) : (
 			<div className="flex gap-1 items-center flex-col">
 				<XCircle size={60} className="text-red-500 mb-2" />
 				<h1 className="font-grotesk text-2xl font-bold">
-					Falha ao enviar
+					{t.contact.popup.errorTitle}
 				</h1>
 				<span className="text-sm max-w-72 text-center">
-					Tente novamente em alguns instantes, ou mude o seu e-mail.
+					{t.contact.popup.errorDesc}
 				</span>
 			</div>
 		);

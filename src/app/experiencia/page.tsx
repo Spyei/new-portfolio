@@ -1,12 +1,17 @@
+"use client";
 import ExperienceCard from "@/components/cards/experience";
 import PageContainer from "@/components/ui/pageContainer";
-import { experiences } from "@/utils/experiences";
+import { getExperiences } from "@/utils/experiences";
+import { useI18n } from "@/contexts/i18n";
 
 export default function Experiencia() {
+	const { t, locale } = useI18n();
+	const experiences = getExperiences(locale);
+
 	return (
 		<PageContainer
-			title="Experiência"
-			description="Minha experiência profissional como desenvolvedor."
+			title={t.experience.title}
+			description={t.experience.description}
 		>
 			<ul className="flex flex-col gap-4 mt-4">
 				{experiences.map((experience) => (

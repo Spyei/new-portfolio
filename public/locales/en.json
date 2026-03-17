@@ -1,0 +1,121 @@
+{
+    "sidebar": {
+        "info": "Information",
+        "links": "Links"
+    },
+    "nav": {
+        "home": "Home",
+        "projects": "Projects",
+        "experience": "Experience",
+        "education": "Education",
+        "contact": "Contact"
+    },
+    "home": {
+        "greeting": "Hi, my name is Caio",
+        "role": "Full Stack Developer",
+        "description": "specialized in Next.js and TypeScript, focused on building modern applications with high performance, clean code and well-thought-out interfaces.",
+        "collaboration": "I believe collaboration is essential for success.",
+        "technologies": {
+            "title": "Technologies",
+            "description": "Languages and tools I use on a daily basis."
+        },
+        "currentProject": {
+            "title": "Current Project",
+            "description": "What I'm working on right now."
+        }
+    },
+    "projects": {
+        "title": "Projects",
+        "description": "Projects I created or took part in developing."
+    },
+    "experience": {
+        "title": "Experience",
+        "description": "My professional experience as a developer."
+    },
+    "education": {
+        "title": "Education",
+        "description": "My education and academic background.",
+        "certificates": {
+            "title": "Certificates",
+            "description": "My certifications and diplomas."
+        },
+        "issuedAt": "Issued on",
+        "credentialCode": "Credential code"
+    },
+    "contact": {
+        "title": "Contact",
+        "description": "Fill out the form below to get in touch via email.",
+        "form": {
+            "name": "Name",
+            "namePlaceholder": "Enter your name here...",
+            "email": "E-mail",
+            "emailPlaceholder": "Enter your e-mail here...",
+            "message": "Message",
+            "messagePlaceholder": "Enter your message here...",
+            "send": "Send",
+            "sending": "Sending"
+        },
+        "popup": {
+            "successTitle": "Message Sent!",
+            "successDesc": "I received your message and will get back to you shortly.",
+            "errorTitle": "Failed to send",
+            "errorDesc": "Please try again in a moment, or try a different email."
+        }
+    },
+    "data": {
+        "projects": [
+            {
+                "id": "latens",
+                "role": "Creator & Full Stack Developer",
+                "development": "December 2025 - Present",
+                "cardDescription": "Latens is a website monitoring project that includes a dashboard and team management system."
+            },
+            {
+                "id": "connections",
+                "role": "Creator & Full Stack Developer",
+                "development": "June, 2024 - December, 2024",
+                "cardDescription": "Connections was a project that linked members of Discord servers through a global chat, including dashboard, team, and payment systems."
+            },
+            {
+                "id": "simo",
+                "role": "Creator & Full Stack Developer",
+                "development": "May, 2023 - March, 2024",
+                "cardDescription": "Simo was a Discord bot listing website that included a dashboard, team system, and SEO for bot promotion — my first project."
+            }
+        ],
+        "experiences": [
+            {
+                "id": 0,
+                "role": "Full Stack Developer",
+                "time": "April, 2024 - Present",
+                "type": "Freelance, Remote",
+                "description": "Legacy system rewrite (WordPress → Next.js) boosting Core Web Vitals from ~55 to 99 points. Full stack development with Node.js, REST APIs, authentication and admin dashboards. Automated deployment via GitHub Actions and Vercel."
+            }
+        ],
+        "education": {
+            "certificates": [
+                {
+                    "id": 0,
+                    "time": "January 2026"
+                }
+            ],
+            "universities": [
+                {
+                    "id": 0,
+                    "degree": "Associate Degree",
+                    "course": "Systems Analysis and Development",
+                    "time": "March, 2026 - September, 2028"
+                }
+            ]
+        }
+    },
+    "validators": {
+        "nameRequired": "Please fill in your name",
+        "nameMaxLength": "Name must be at most 50 characters",
+        "emailRequired": "Please fill in your email",
+        "emailInvalid": "Please provide a valid email address",
+        "emailMaxLength": "Email must be at most 255 characters",
+        "messageRequired": "Please fill in your message",
+        "messageMaxLength": "Message must be at most 500 characters"
+    }
+}

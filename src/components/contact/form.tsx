@@ -1,3 +1,5 @@
+"use client";
+
 import { springElement } from "@/utils/animations";
 import type { HomeContextProps } from "../home";
 import Input from "./input";
@@ -7,6 +9,7 @@ import { type SubmitEvent, useState } from "react";
 import { type ContactFormErrors, validateContactForm } from "@/validators/form";
 import PopUp from "./popup";
 import { LoaderCircleIcon, Send } from "lucide-react";
+import { useI18n } from "@/contexts/i18n";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -14,6 +17,7 @@ export default function ContactForm({
 	isFirstVisit,
 	firstVisitDelay,
 }: HomeContextProps) {
+	const { t } = useI18n();
 	const [errors, setErrors] = useState<ContactFormErrors>({});
 	const [status, setStatus] = useState<Status>("idle");
 	const [send, setSend] = useState(false);
@@ -30,7 +34,7 @@ export default function ContactForm({
 			message: formData.get("message")?.toString() || "",
 		};
 
-		const validationErrors = validateContactForm(data);
+		const validationErrors = validateContactForm(data, t.validators);
 
 		if (Object.keys(validationErrors).length > 0) {
 			setErrors(validationErrors);
@@ -57,7 +61,6 @@ export default function ContactForm({
 
 			if (res.ok && json.success) {
 				setStatus("success");
-
 				form.reset();
 			} else {
 				setStatus("error");
@@ -77,8 +80,8 @@ export default function ContactForm({
 					setErrors={setErrors}
 					id="name"
 					index={0}
-					label="Nome"
-					placeholder="Digite seu nome aqui..."
+					label={t.contact.form.name}
+					placeholder={t.contact.form.namePlaceholder}
 					type="text"
 					error={errors.name}
 				/>
@@ -86,8 +89,8 @@ export default function ContactForm({
 					setErrors={setErrors}
 					id="email"
 					index={1}
-					label="E-mail"
-					placeholder="Digite seu e-mail aqui..."
+					label={t.contact.form.email}
+					placeholder={t.contact.form.emailPlaceholder}
 					type="text"
 					error={errors.email}
 				/>
@@ -95,8 +98,8 @@ export default function ContactForm({
 					setErrors={setErrors}
 					id="message"
 					index={2}
-					label="Mensagem"
-					placeholder="Digite sua mensagem aqui..."
+					label={t.contact.form.message}
+					placeholder={t.contact.form.messagePlaceholder}
 					type="textarea"
 					error={errors.message}
 				/>
@@ -122,7 +125,11 @@ export default function ContactForm({
 							)
 						}
 						disabled={status === "loading" || send}
-						label={status === "loading" ? "Enviando" : "Enviar"}
+						label={
+							status === "loading"
+								? t.contact.form.sending
+								: t.contact.form.send
+						}
 						type="submit"
 					/>
 				</motion.div>

@@ -1,35 +1,61 @@
 "use client";
+
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { useRef, useState, useEffect } from "react";
-import { Briefcase, FolderOpen, GraduationCap, House, UserRound } from "lucide-react";
+import { useRef, useState, useEffect, useMemo } from "react";
+import {
+	Briefcase,
+	FolderOpen,
+	GraduationCap,
+	House,
+	UserRound,
+} from "lucide-react";
 import Option from "./option";
 import { useFirstVisit } from "@/hooks/useFirstVisit";
-
-const routes = [
-	{ href: "/", title: "Início", icon: <House size={20} /> },
-	{ href: "/projetos", title: "Projetos", icon: <FolderOpen size={20} /> },
-    { href: "/experiencia", title: "Experiência", icon: <Briefcase size={20} /> },
-	{ href: "/educacao", title: "Educação", icon: <GraduationCap size={20} /> },
-	{ href: "/contato", title: "Contato", icon: <UserRound size={20} /> },
-];
+import { useI18n } from "@/contexts/i18n";
 
 export default function Nav() {
 	const pathname = usePathname();
 	const isFirstVisit = useFirstVisit();
+	const { t } = useI18n();
+
+	const routes = useMemo(
+		() => [
+			{ href: "/", title: t.nav.home, icon: <House size={20} /> },
+			{
+				href: "/projetos",
+				title: t.nav.projects,
+				icon: <FolderOpen size={20} />,
+			},
+			{
+				href: "/experiencia",
+				title: t.nav.experience,
+				icon: <Briefcase size={20} />,
+			},
+			{
+				href: "/educacao",
+				title: t.nav.education,
+				icon: <GraduationCap size={20} />,
+			},
+			{
+				href: "/contato",
+				title: t.nav.contact,
+				icon: <UserRound size={20} />,
+			},
+		],
+		[t.nav],
+	);
 
 	const refs = useRef<(HTMLDivElement | null)[]>([]);
 	const [pillStyle, setPillStyle] = useState<{
 		top: number;
 		height: number;
 	} | null>(null);
-
 	const [introDone, setIntroDone] = useState(false);
 
 	useEffect(() => {
 		if (isFirstVisit) {
 			const timer = setTimeout(() => setIntroDone(true), 800);
-
 			return () => clearTimeout(timer);
 		} else {
 			setIntroDone(true);
@@ -39,9 +65,8 @@ export default function Nav() {
 	useEffect(() => {
 		const index = routes.findIndex((r) => r.href === pathname);
 		const el = refs.current[index];
-
 		if (el) setPillStyle({ top: el.offsetTop, height: el.offsetHeight });
-	}, [pathname]);
+	}, [pathname, routes]);
 
 	return (
 		<div className="relative flex flex-col gap-2 md:gap-1">

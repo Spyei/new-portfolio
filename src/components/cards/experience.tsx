@@ -1,14 +1,16 @@
 "use client";
 
-import type { experiences } from "@/utils/experiences";
+import type { getExperiences } from "@/utils/experiences";
 import { firstVisitDelay, springElement } from "@/utils/animations";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { technologies } from "@/utils/technologies";
 import { useFirstVisit } from "@/hooks/useFirstVisit";
 
+type Experience = ReturnType<typeof getExperiences>[0];
+
 interface Props {
-	experience: (typeof experiences)[0];
+	experience: Experience;
 }
 
 export default function ExperienceCard({ experience }: Props) {
@@ -24,7 +26,7 @@ export default function ExperienceCard({ experience }: Props) {
 					isFirstVisit,
 				),
 			)}
-			className="flex w-full shadow-lg bg-card border-border border rounded-2xl p-6 gap-1"
+			className="flex w-full shadow-lg bg-card border-border border rounded-2xl p-6 gap-1" 
 		>
 			<div>
 				<Image

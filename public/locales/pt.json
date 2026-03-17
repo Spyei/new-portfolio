@@ -1,0 +1,121 @@
+{
+    "sidebar": {
+        "info": "Informações",
+        "links": "Links"
+    },
+    "nav": {
+        "home": "Início",
+        "projects": "Projetos",
+        "experience": "Experiência",
+        "education": "Educação",
+        "contact": "Contato"
+    },
+    "home": {
+        "greeting": "Olá, Eu me chamo Caio",
+        "role": "Desenvolvedor Full Stack",
+        "description": "especializado em Next.js e TypeScript, focado em construir aplicações modernas com alta performance, código limpo e interfaces bem pensadas.",
+        "collaboration": "Acredito que colaboração é essencial para o sucesso.",
+        "technologies": {
+            "title": "Tecnologias",
+            "description": "Linguagens e ferramentas que uso no dia a dia."
+        },
+        "currentProject": {
+            "title": "Projeto Atual",
+            "description": "No que estou trabalhando agora."
+        }
+    },
+    "projects": {
+        "title": "Projetos",
+        "description": "Projetos que eu criei ou fiz parte do desenvolvimento."
+    },
+    "experience": {
+        "title": "Experiência",
+        "description": "Minha experiência profissional como desenvolvedor."
+    },
+    "education": {
+        "title": "Educação",
+        "description": "Minha educação e formação acadêmica.",
+        "certificates": {
+            "title": "Certificados",
+            "description": "Minhas certificações e diplomas."
+        },
+        "issuedAt": "Emitido em",
+        "credentialCode": "Código da credencial"
+    },
+    "contact": {
+        "title": "Contato",
+        "description": "Preencha o formulário abaixo para entrarmos em contato via email.",
+        "form": {
+            "name": "Nome",
+            "namePlaceholder": "Digite seu nome aqui...",
+            "email": "E-mail",
+            "emailPlaceholder": "Digite seu e-mail aqui...",
+            "message": "Mensagem",
+            "messagePlaceholder": "Digite sua mensagem aqui...",
+            "send": "Enviar",
+            "sending": "Enviando"
+        },
+        "popup": {
+            "successTitle": "Mensagem Enviada!",
+            "successDesc": "Recebi sua mensagem e entrarei em contato em breve.",
+            "errorTitle": "Falha ao enviar",
+            "errorDesc": "Tente novamente em alguns instantes, ou mude o seu e-mail."
+        }
+    },
+    "data": {
+        "projects": [
+            {
+                "id": "latens",
+                "role": "Criador & Desenvolvedor Full Stack",
+                "development": "Dezembro 2025 - Atual",
+                "cardDescription": "Latens é um projeto de monitoramento de websites, que inclui sistema de dashboard e times."
+            },
+            {
+                "id": "connections",
+                "role": "Criador & Desenvolvedor Full Stack",
+                "development": "Junho, 2024 - Dezembro, 2024",
+                "cardDescription": "Connections foi um projeto que interligava membros de servidores do Discord por meio de um chat global, que incluia sistemas de dashboard, times e pagamentos."
+            },
+            {
+                "id": "simo",
+                "role": "Criador & Desenvolvedor Full Stack",
+                "development": "Maio, 2023 - Março, 2024",
+                "cardDescription": "Simo foi um website de divulgação de bots no Discord, que incluia sistema de dashboard, times, e um SEO para divulgação dos bots, primeiro projeto feito por mim."
+            }
+        ],
+        "experiences": [
+            {
+                "id": 0,
+                "role": "Desenvolvedor Full Stack",
+                "time": "Abril, 2024 - Atual",
+                "type": "Freelance, Remoto",
+                "description": "Reescrita de sistema legado (WordPress → Next.js) elevando o Core Web Vitals de ~55 para 99 pontos. Desenvolvimento full stack com Node.js, APIs REST, autenticação e dashboards administrativos. Deploy automatizado via GitHub Actions e Vercel."
+            }
+        ],
+        "education": {
+            "certificates": [
+                {
+                    "id": 0,
+                    "time": "Janeiro de 2026"
+                }
+            ],
+            "universities": [
+                {
+                    "id": 0,
+                    "degree": "Técnologo",
+                    "course": "Análise e Desenvolvimento de Sistemas",
+                    "time": "Março, 2026 - Setembro, 2028"
+                }
+            ]
+        }
+    },
+    "validators": {
+        "nameRequired": "Lembre-se de preencher o nome",
+        "nameMaxLength": "O nome deve conter no máximo 50 caracteres",
+        "emailRequired": "Lembre-se de preencher o e-mail",
+        "emailInvalid": "Certifique-se de fornecer um e-mail válido",
+        "emailMaxLength": "O e-mail deve conter no máximo 255 caracteres",
+        "messageRequired": "Lembre-se de preencher a mensagem",
+        "messageMaxLength": "A mensagem deve conter no máximo 500 caracteres"
+    }
+}
