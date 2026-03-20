@@ -4,7 +4,7 @@ import Container from "@/components/ui/container";
 export default async function Home() {
 	const carbon = {
 		rating: "A",
-		cleanerThan: 0.88,
+		cleanerThan: 0.89,
 		grams: 0.12,
 		green: true,
 	};
