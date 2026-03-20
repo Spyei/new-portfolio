@@ -10,9 +10,13 @@ export async function getCarbonData(): Promise<CarbonData | null> {
             { next: { revalidate: 86400 } }
         );
 
+        console.log(res);
+
         if (!res.ok) return null;
 
         const data = await res.json();
+
+        console.log(JSON.stringify(data));
 
         return {
             rating: data.rating,
@@ -20,7 +24,8 @@ export async function getCarbonData(): Promise<CarbonData | null> {
             grams: data.gco2e,
             green: data.green,
         };
-    } catch {
+    } catch (error) {
+        console.error(error);
         return null;
     }
 }
