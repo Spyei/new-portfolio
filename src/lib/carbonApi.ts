@@ -7,6 +7,7 @@ export async function getCarbonData(): Promise<CarbonData | null> {
     try {
         const res = await fetch(
             `https://api.websitecarbon.com/data?bytes=${SITE_BYTES}&green=${IS_GREEN}`,
+            { cache: "no-store" }
         );
 
         console.log(res);
