@@ -19,7 +19,7 @@ export interface HomeContextProps {
 }
 
 interface Props {
-	carbon: CarbonData | null;
+	carbon: CarbonData;
 }
 
 export default function HomeContent({ carbon }: Props) {
@@ -36,7 +36,7 @@ export default function HomeContent({ carbon }: Props) {
 			<Technologies {...visitProps} />
 			<ActualProject {...visitProps} />
 			<DiscordActivity {...visitProps} />
-			{carbon !== null && <CarbonBadge {...visitProps} data={carbon} />}{" "}
+			<CarbonBadge {...visitProps} data={carbon} />
 		</section>
 	);
 }
