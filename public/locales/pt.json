@@ -117,5 +117,37 @@
         "emailMaxLength": "O e-mail deve conter no máximo 255 caracteres",
         "messageRequired": "Lembre-se de preencher a mensagem",
         "messageMaxLength": "A mensagem deve conter no máximo 500 caracteres"
+    },
+    "discord": {
+        "title":  "Atividade",
+        "description": "Atividade em tempo real utilizando websocket do Discord.",
+        "listeningOnSpotify": "Ouvindo no Spotify",
+        "status": {
+            "online": "online",
+            "idle": "ausente",
+            "dnd": "não perturbe",
+            "offline": "offline"
+        },
+        "badge": {
+            "live": "live",
+            "connecting": "...",
+            "off": "off",
+            "error": "erro"
+        },
+        "activityType": {
+            "playing": "Jogando",
+            "streaming": "Streaming",
+            "listening": "Ouvindo",
+            "watching": "Assistindo",
+            "competing": "Competindo em",
+            "unknown": "Ativo"
+        },
+        "elapsed": "decorrido",
+        "noActivity": "Sem atividade no momento"
+    },
+    "carbon": {
+        "cleanerThan": "Mais limpo que {percent}% dos sites testados",
+        "co2PerVisit": "{grams}g CO₂/visita",
+        "renewable": "Energia renovável"
     }
 }

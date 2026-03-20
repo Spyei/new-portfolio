@@ -12,7 +12,7 @@ import ptMessages from "../../public/locales/pt.json";
 import enMessages from "../../public/locales/en.json";
 
 export type Locale = "pt" | "en";
-type Messages = typeof ptMessages;
+export type Messages = typeof ptMessages;
 
 interface I18nContextProps {
 	locale: Locale;
