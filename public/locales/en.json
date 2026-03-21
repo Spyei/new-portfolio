@@ -8,7 +8,8 @@
         "projects": "Projects",
         "experience": "Experience",
         "education": "Education",
-        "contact": "Contact"
+        "contact": "Contact",
+        "activity": "Activity"
     },
     "home": {
         "greeting": "Hi, my name is Caio",
@@ -119,7 +120,7 @@
         "messageMaxLength": "Message must be at most 500 characters"
     },
     "discord": {
-        "title":  "Activity",
+        "title": "Activity",
         "description": "Real-time activity using Discord websocket.",
         "listeningOnSpotify": "Listening on Spotify",
         "status": {
@@ -149,5 +150,42 @@
         "cleanerThan": "Cleaner than {percent}% of tested sites",
         "co2PerVisit": "{grams}g CO₂/visit",
         "renewable": "Renewable energy"
+    },
+    "wakatime": {
+        "lastDays": "last 7 days",
+        "totalCoding": "total coding",
+        "languages": "languages",
+        "projects": "projects",
+        "editors": "editors",
+        "os": "systems",
+        "dailyAverage": "daily average",
+        "bestDay": "best day",
+        "categories": "categories"
+    },
+    "github": {
+        "contributions": "contribuições",
+        "currentStreak": "streak atual",
+        "longestStreak": "maior streak",
+        "contributionGraph": "atividade",
+        "pinnedRepos": "repositórios",
+        "advice": "The information is from the current year"
+    },
+    "anilist": {
+        "totalAnime": "animes",
+        "daysWatched": "dias assistidos",
+        "totalManga": "mangás",
+        "chaptersRead": "capítulos lidos",
+        "watching": "assistindo",
+        "reading": "lendo"
+    },
+    "lastfm": {
+        "nowPlaying": "tocando agora",
+        "recent": "recentes",
+        "topTracks": "top músicas",
+        "topArtists": "top artistas",
+        "topAlbums": "top albums" 
+    },
+    "activity": {
+        "github": "Github activity graph and fixed projects."
     }
 }

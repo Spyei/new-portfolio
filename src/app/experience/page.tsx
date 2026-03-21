@@ -4,7 +4,7 @@ import PageContainer from "@/components/ui/pageContainer";
 import { getExperiences } from "@/utils/experiences";
 import { useI18n } from "@/contexts/i18n";
 
-export default function Experiencia() {
+export default function ExperiencePage() {
 	const { t, locale } = useI18n();
 	const experiences = getExperiences(locale);
 

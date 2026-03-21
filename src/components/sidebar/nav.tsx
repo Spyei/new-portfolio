@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useRef, useState, useEffect, useMemo } from "react";
 import {
+	ActivityIcon,
 	Briefcase,
 	FolderOpen,
 	GraduationCap,
@@ -23,22 +24,27 @@ export default function Nav() {
 		() => [
 			{ href: "/", title: t.nav.home, icon: <House size={20} /> },
 			{
-				href: "/projetos",
+				href: "/projects",
 				title: t.nav.projects,
 				icon: <FolderOpen size={20} />,
 			},
 			{
-				href: "/experiencia",
+				href: "/experience",
 				title: t.nav.experience,
 				icon: <Briefcase size={20} />,
 			},
 			{
-				href: "/educacao",
+				href: "/education",
 				title: t.nav.education,
 				icon: <GraduationCap size={20} />,
 			},
 			{
-				href: "/contato",
+				href: "/activity",
+				title: t.nav.activity,
+				icon: <ActivityIcon size={20} />,
+			},
+			{
+				href: "/contact",
 				title: t.nav.contact,
 				icon: <UserRound size={20} />,
 			},

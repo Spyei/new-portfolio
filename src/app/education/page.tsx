@@ -10,7 +10,7 @@ import { getEducation } from "@/utils/education";
 import { useI18n } from "@/contexts/i18n";
 import { motion } from "framer-motion";
 
-export default function Educacao() {
+export default function EducationPage() {
 	const isFirstVisit = useFirstVisit();
 	const { t, locale } = useI18n();
 	const education = getEducation(locale);

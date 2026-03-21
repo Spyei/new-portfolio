@@ -8,7 +8,7 @@ import { firstVisitDelay, springElement } from "@/utils/animations";
 import { motion } from "framer-motion";
 import { useI18n } from "@/contexts/i18n";
 
-export default function Contato() {
+export default function ContactPage() {
 	const isFirstVisit = useFirstVisit();
 	const { t } = useI18n();
 

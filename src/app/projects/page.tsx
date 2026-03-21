@@ -1,10 +1,11 @@
 "use client";
+
 import ProjectCard from "@/components/cards/project";
 import PageContainer from "@/components/ui/pageContainer";
 import { getProjects } from "@/utils/projects";
 import { useI18n } from "@/contexts/i18n";
 
-export default function Projetos() {
+export default function ProjectsPage() {
 	const { t, locale } = useI18n();
 	const projects = getProjects(locale);
 
