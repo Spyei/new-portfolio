@@ -120,7 +120,7 @@
         "messageMaxLength": "Message must be at most 500 characters"
     },
     "discord": {
-        "title": "Activity",
+        "title": "Discord",
         "description": "Real-time activity using Discord websocket.",
         "listeningOnSpotify": "Listening on Spotify",
         "status": {
@@ -153,7 +153,7 @@
     },
     "wakatime": {
         "lastDays": "last 7 days",
-        "totalCoding": "total coding",
+        "totalCoding": "total coding time",
         "languages": "languages",
         "projects": "projects",
         "editors": "editors",
@@ -163,29 +163,47 @@
         "categories": "categories"
     },
     "github": {
-        "contributions": "contribuições",
-        "currentStreak": "streak atual",
-        "longestStreak": "maior streak",
-        "contributionGraph": "atividade",
-        "pinnedRepos": "repositórios",
+        "contributions": "contributions",
+        "currentStreak": "current streak",
+        "longestStreak": "longest streak",
+        "contributionGraph": "activity",
+        "pinnedRepos": "pinned repositories",
         "advice": "The information is from the current year"
     },
     "anilist": {
         "totalAnime": "animes",
-        "daysWatched": "dias assistidos",
-        "totalManga": "mangás",
-        "chaptersRead": "capítulos lidos",
-        "watching": "assistindo",
-        "reading": "lendo"
+        "daysWatched": "days watched",
+        "totalManga": "mangas",
+        "chaptersRead": "chapters read",
+        "watching": "watching",
+        "reading": "reading",
+        "favoriteAnime": "favorite animes",
+        "favoriteManga": "favorite mangas",
+        "formatLabels": {
+            "TV": "TV",
+            "MOVIE": "Movie",
+            "OVA": "OVA",
+            "ONA": "ONA",
+            "SPECIAL": "Special",
+            "MANGA": "Manga",
+            "NOVEL": "Novel"
+        }
     },
     "lastfm": {
-        "nowPlaying": "tocando agora",
-        "recent": "recentes",
-        "topTracks": "top músicas",
-        "topArtists": "top artistas",
-        "topAlbums": "top albums" 
+        "nowPlaying": "now playing",
+        "recent": "recent",
+        "topTracks": "top tracks",
+        "topArtists": "top artists",
+        "topAlbums": "top albums",
+        "totalScrobbles": "total scrobbles",
+        "totalArtists": "total artists",
+        "avgScrobblesPerDay": "avg scrobbles per day",
+        "topweekly": "top weekly track"
     },
     "activity": {
-        "github": "Github activity graph and fixed projects."
+        "github": "Github activity graph and fixed projects.",
+        "wakatime": "Wakatime activity graph from 2023.",
+        "lastfm": "Recently listened music, and data based on 1 month of scrobbles.",
+        "anilist": "List of animes I watched recently, and favorites."
     }
 }

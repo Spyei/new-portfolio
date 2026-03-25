@@ -120,7 +120,7 @@
         "messageMaxLength": "A mensagem deve conter no máximo 500 caracteres"
     },
     "discord": {
-        "title": "Atividade",
+        "title": "Discord",
         "description": "Atividade em tempo real utilizando websocket do Discord.",
         "listeningOnSpotify": "Ouvindo no Spotify",
         "status": {
@@ -153,7 +153,7 @@
     },
     "wakatime": {
         "lastDays": "últimos 7 dias",
-        "totalCoding": "total codando",
+        "totalCoding": "tempo total codado",
         "languages": "linguagens",
         "projects": "projetos",
         "editors": "editores",
@@ -176,16 +176,34 @@
         "totalManga": "mangás",
         "chaptersRead": "capítulos lidos",
         "watching": "assistindo",
-        "reading": "lendo"
+        "reading": "lendo",
+        "favoriteAnime": "animes favoritos",
+        "favoriteManga": "mangás favoritos",
+        "formatLabels": {
+            "TV": "TV",
+            "MOVIE": "Filme",
+            "OVA": "OVA",
+            "ONA": "ONA",
+            "SPECIAL": "Especial",
+            "MANGA": "Mangá",
+            "NOVEL": "Novel"
+        }
     },
     "lastfm": {
         "nowPlaying": "tocando agora",
         "recent": "recentes",
         "topTracks": "top músicas",
         "topArtists": "top artistas",
-        "topAlbums": "top álbuns" 
+        "topAlbums": "top álbuns",
+        "totalScrobbles": "scrobbles totais",
+        "totalArtists": "artistas totais",
+        "avgScrobblesPerDay": "scrobbles médio por dia",
+        "topweekly": "top música semanal"
     },
     "activity": {
-        "github": "Gráfico de commits e projetos fixados no github."
+        "github": "Gráfico de commits e projetos fixados no github.",
+        "wakatime": "Gráfico de horas de trabalho BRUTAS no wakatime desde 2023.",
+        "lastfm": "Músicas que ouvi recentemente, e dados com baseados em 1 mês de scrobbles.",
+        "anilist": "Lista de animes que eu assisti recentemente, e favoritos."
     }
 }
