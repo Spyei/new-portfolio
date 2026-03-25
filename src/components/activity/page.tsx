@@ -4,7 +4,6 @@ import { useFirstVisit } from "@/hooks/useFirstVisit";
 import { useI18n } from "@/contexts/i18n";
 import { motion } from "framer-motion";
 import { firstVisitDelay, springElement } from "@/utils/animations";
-import GithubActivity from "@/components/home/activity/github";
 import type {
 	AnilistData,
 	GithubData,
@@ -13,10 +12,11 @@ import type {
 } from "@/types";
 import Container from "../ui/container";
 import { ArrowUpRight } from "lucide-react";
-import WakaTimeCard from "../home/activity/wakatime";
-import LastfmActivity from "../home/activity/lastfm";
-import DiscordActivity from "../home/activity/discord";
-import AnilistActivity from "../home/activity/anilist";
+import DiscordActivity from "./cards/discord";
+import GithubActivity from "./cards/github";
+import WakaTimeCard from "./cards/wakatime";
+import LastfmActivity from "./cards/lastfm";
+import AnilistActivity from "./cards/anilist";
 
 interface Props {
 	githubData: GithubData | null;

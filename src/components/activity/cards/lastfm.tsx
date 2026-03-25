@@ -34,34 +34,32 @@ export default function LastfmActivity({ data }: { data: LastfmData }) {
 						value={data.userInfo.avgScrobblesPerDay}
 					/>
 				</div>
-				<div>
-					{topTrack && (
-						<div className="rounded-2xl bg-card border border-border p-3 shadow-lg text-center flex w-full items-center">
-							<div className="relative shrink-0 w-9 h-9 rounded-sm overflow-hidden bg-secondary/10">
-								{topTrack.coverImage && (
-									<Image
-										src={topTrack.coverImage}
-										alt={topTrack.name}
-										fill
-										className="object-cover"
-										sizes="36px"
-									/>
-								)}
-							</div>
-							<div className="w-full">
-								<p className="text-sm font-semibold tabular-nums">
-									{topTrack.name}
-								</p>
-								<p className="text-[10px] font-semibold uppercase tracking-widest text-secondary/40 mt-0.5">
-									{t.lastfm.topweekly}
-								</p>
-							</div>
+				{topTrack && (
+					<div className="rounded-2xl bg-card border border-border p-3 shadow-lg text-center flex w-full items-center">
+						<div className="relative shrink-0 w-9 h-9 rounded-sm overflow-hidden bg-secondary/10">
+							{topTrack.coverImage && (
+								<Image
+									src={topTrack.coverImage}
+									alt={topTrack.name}
+									fill
+									className="object-cover"
+									sizes="36px"
+								/>
+							)}
 						</div>
-					)}
-				</div>
+						<div className="w-full">
+							<p className="text-sm font-semibold tabular-nums">
+								{topTrack.name}
+							</p>
+							<p className="text-[10px] font-semibold uppercase tracking-widest text-secondary/40 mt-0.5">
+								{t.lastfm.topweekly}
+							</p>
+						</div>
+					</div>
+				)}
 			</div>
 
-			<div className="grid grid-cols-2">
+			<div className="grid md:grid-cols-2 gap-4 md:gap-0">
 				{recent.length > 0 && (
 					<div className="flex flex-col gap-2">
 						<span className="text-[10px] font-semibold uppercase tracking-widest text-secondary/40">
@@ -89,7 +87,7 @@ export default function LastfmActivity({ data }: { data: LastfmData }) {
 				)}
 			</div>
 
-			<div className="grid grid-cols-2 gap-4">
+			<div className="grid md:grid-cols-2 gap-4">
 				{data.topTracks.length > 0 && (
 					<div className="flex flex-col gap-2">
 						<span className="text-[10px] font-semibold uppercase tracking-widest text-secondary/40">
@@ -132,7 +130,7 @@ function TrackRow({
 			href={track.url}
 			target="_blank"
 			rel="noreferrer"
-			className="flex items-center gap-3 group"
+			className="flex items-center gap-3 group hover:scale-101 transition-transform"
 		>
 			<div className="relative shrink-0 w-9 h-9 rounded-sm overflow-hidden bg-secondary/10">
 				{track.coverImage && (
@@ -168,7 +166,7 @@ function ArtistRow({ artist }: { artist: LastfmArtist }) {
 			href={artist.url}
 			target="_blank"
 			rel="noreferrer"
-			className="flex items-center gap-3 group"
+			className="flex items-center gap-3 group hover:scale-101 transition-transform"
 		>
 			<div className="relative shrink-0 w-9 h-9 rounded-full overflow-hidden bg-secondary/10">
 				{artist.image && (
@@ -200,7 +198,7 @@ function AlbumRow({ album, index }: { album: LastfmAlbum; index: number }) {
 			href={album.url}
 			target="_blank"
 			rel="noreferrer"
-			className="flex items-center gap-3 group"
+			className="flex items-center gap-3 group hover:scale-101 transition-transform"
 		>
 			<div className="relative shrink-0 w-9 h-9 rounded-lg overflow-hidden bg-secondary/10">
 				{album.coverImage && (

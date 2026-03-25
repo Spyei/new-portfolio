@@ -19,10 +19,8 @@ export default function WakaTimeCard({ data }: { data: WakaTimeData }) {
 				/>
 			</div>
 
-			<div className="h-px bg-border" />
-
 			<div className="flex flex-col gap-4">
-				<div className="grid grid-cols-2 gap-4">
+				<div className="grid md:grid-cols-2 gap-4">
 					<Section
 						title={t.wakatime.languages}
 						items={data.languages}

@@ -14,8 +14,8 @@ import { useEffect, useRef, useState } from "react";
 import Title from "../../ui/title";
 import { motion } from "framer-motion";
 import { springElement } from "@/utils/animations";
-import type { HomeContextProps } from "..";
 import { Check, Copy } from "lucide-react";
+import type { HomeContextProps } from "@/components/home";
 
 const DISCORD_USER_ID = "955095844275781693";
 
@@ -216,7 +216,7 @@ function SpotifyCard({ spotify, t }: { spotify: SpotifyData; t: Messages }) {
 						<p className="text-[14px] font-semibold text-secondary truncate font-sans">
 							{spotify.song}
 						</p>
-						<div className="text-secondary/60 flex flex-col text-[12px]">
+						<div className="text-secondary/60 flex flex-col text-[12px] truncate max-w-32 sm:max-w-4xl">
 							<p className="truncate">{spotify.artist}</p>
 							<p className="truncate">{spotify.album}</p>
 						</div>

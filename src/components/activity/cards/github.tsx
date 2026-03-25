@@ -129,7 +129,7 @@ function RepoCard({ repo }: { repo: GithubData["pinnedRepos"][0] }) {
 			href={repo.url}
 			target="_blank"
 			rel="noreferrer"
-			className="rounded-2xl bg-card border border-border p-4 shadow-lg hover:shadow-xl transition-shadow flex flex-col gap-2 group"
+			className="rounded-2xl bg-card border border-border p-4 shadow-lg hover:shadow-xl hover:scale-101 transition-transform flex flex-col gap-2 group"
 		>
 			<div className="flex items-start justify-between gap-2">
 				<div className="flex gap-1.5">
