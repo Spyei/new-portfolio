@@ -1,5 +1,5 @@
-// src/context/theme.tsx
 "use client";
+
 import {
 	createContext,
 	useContext,
