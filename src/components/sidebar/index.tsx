@@ -77,33 +77,16 @@ export default function Sidebar() {
 						/>
 						<Option
 							link
-							href="https://www.last.fm/user/spyeicaio"
-							title="Last.fm"
+							href="https://open.spotify.com/user/31z6rizzti7ttwtyfoyewqozpicq"
+							title="Spotify"
 							icon={
 								<Image
 									src={
 										theme === "dark"
-											? "/icons/lastfmc.svg"
-											: "/icons/lastfm.svg"
+											? "/icons/spotifyc.svg"
+											: "/icons/spotify.svg"
 									}
-									alt="Last.fm icon"
-									width={20}
-									height={20}
-								/>
-							}
-						/>
-						<Option
-							link
-							href="https://anilist.co/user/spyei"
-							title="AniList"
-							icon={
-								<Image
-									src={
-										theme === "dark"
-											? "/icons/anilistc.svg"
-											: "/icons/anilist.svg"
-									}
-									alt="AniList icon"
+									alt="Instagram icon"
 									width={20}
 									height={20}
 								/>
