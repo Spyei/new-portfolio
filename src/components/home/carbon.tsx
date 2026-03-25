@@ -20,7 +20,7 @@ export default function CarbonBadge({
 
 	return (
 		<motion.div
-			{...springElement(0.9, firstVisitDelay(4, 3, isFirstVisit))}
+			{...springElement(0.9, firstVisitDelay(3.1, 2, isFirstVisit))}
 		>
 			<a
 				href="https://www.websitecarbon.com/website/spyeicaio-vercel-app/"

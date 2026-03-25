@@ -5,7 +5,6 @@ import Header from "./header";
 import ActualProject from "./project";
 import Technologies from "./technologies";
 import { firstVisitDelay } from "@/utils/animations";
-import DiscordActivity from "./activity";
 import CarbonBadge from "./carbon";
 import type { CarbonData } from "@/types";
 
@@ -35,7 +34,6 @@ export default function HomeContent({ carbon }: Props) {
 			<Header {...visitProps} />
 			<Technologies {...visitProps} />
 			<ActualProject {...visitProps} />
-			<DiscordActivity {...visitProps} />
 			<CarbonBadge {...visitProps} data={carbon} />
 		</section>
 	);
