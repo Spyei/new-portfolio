@@ -20,7 +20,8 @@
 			"recommended": true,
 			"suspicious": {
 				"noUnknownAtRules": "off",
-				"noArrayIndexKey": "off"
+				"noArrayIndexKey": "off",
+				"noExplicitAny": "off"
 			},
 			"style": {
 				"useTemplate": "off",
