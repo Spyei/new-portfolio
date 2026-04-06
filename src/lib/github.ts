@@ -56,6 +56,7 @@ export async function getGithubData(): Promise<GithubData | null> {
 			method: "POST",
 			headers,
 			body: JSON.stringify({ query }),
+			next: { revalidate: 3600 },
 		});
 
 		if (!res.ok) return null;
@@ -72,15 +73,29 @@ export async function getGithubData(): Promise<GithubData | null> {
 			.sort((a: any, b: any) => b.date.localeCompare(a.date));
 
 		let currentStreak = 0;
+		let counting = true;
+
+		for (const day of days) {
+			if (!counting) break;
+
+			if (day.contributionCount > 0) {
+				currentStreak++;
+			} else {
+				const isToday =
+					day.date === new Date().toISOString().slice(0, 10);
+
+				if (!isToday) counting = false;
+			}
+		}
+
 		let longestStreak = 0;
 		let tempStreak = 0;
 
-		for (const day of days) {
+		for (const day of [...days].reverse()) {
 			if (day.contributionCount > 0) {
 				tempStreak++;
+
 				if (tempStreak > longestStreak) longestStreak = tempStreak;
-				if (currentStreak === tempStreak - 1 || currentStreak === 0)
-					currentStreak = tempStreak;
 			} else {
 				tempStreak = 0;
 			}

@@ -8,7 +8,7 @@ export async function getWakaTimeData(): Promise<WakaTimeData | null> {
 
 		const encoded = Buffer.from(key).toString("base64");
 		const headers = { Authorization: `Basic ${encoded}` };
-		const opts = { headers };
+		const opts = { headers, next: { revalidate: 3600 } };
 
 		const [statsRes, allTimeRes] = await Promise.all([
 			fetch(
@@ -38,27 +38,21 @@ export async function getWakaTimeData(): Promise<WakaTimeData | null> {
 				text: s.best_day.text,
 			},
 			since: s.human_readable_range,
-			languages: s.languages
-				.slice(0, 8)
-				.map((l: any) => ({
-					name: l.name,
-					percent: l.percent,
-					text: l.text,
-				})),
-			editors: s.editors
-				.slice(0, 3)
-				.map((e: any) => ({
-					name: e.name,
-					percent: e.percent,
-					text: e.text,
-				})),
-			operatingSystems: s.operating_systems
-				.slice(0, 3)
-				.map((o: any) => ({
-					name: o.name,
-					percent: o.percent,
-					text: o.text,
-				})),
+			languages: s.languages.slice(0, 8).map((l: any) => ({
+				name: l.name,
+				percent: l.percent,
+				text: l.text,
+			})),
+			editors: s.editors.slice(0, 3).map((e: any) => ({
+				name: e.name,
+				percent: e.percent,
+				text: e.text,
+			})),
+			operatingSystems: s.operating_systems.slice(0, 3).map((o: any) => ({
+				name: o.name,
+				percent: o.percent,
+				text: o.text,
+			})),
 			categories: s.categories
 				.filter((c: any) => c.percent > 0.01)
 				.slice(0, 2)

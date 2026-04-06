@@ -63,6 +63,7 @@ export async function getAnilistData(): Promise<AnilistData | null> {
 				Accept: "application/json",
 			},
 			body: JSON.stringify({ query, variables: { name: ANILIST_USER } }),
+			next: { revalidate: 3600 },
 		});
 
 		if (!res.ok) return null;

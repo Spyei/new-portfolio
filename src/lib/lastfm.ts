@@ -49,6 +49,9 @@ async function fetchTrackImage(
 	try {
 		const res = await fetch(
 			`${BASE}?method=track.getInfo&artist=${encodeURIComponent(artist)}&track=${encodeURIComponent(track)}&api_key=${apiKey}&format=json`,
+			{
+				next: { revalidate: 86400 },
+			},
 		);
 
 		const data = await res.json();
@@ -63,6 +66,9 @@ async function fetchArtistImage(artist: string): Promise<string | null> {
 	try {
 		const res = await fetch(
 			`https://itunes.apple.com/search?term=${encodeURIComponent(artist)}&limit=1&entity=song&media=music`,
+			{
+				next: { revalidate: 86400 },
+			},
 		);
 
 		const data = await res.json();
@@ -86,22 +92,38 @@ export async function getLastfmData(): Promise<LastfmData | null> {
 			topAlbumsRes,
 			allArtistsRes,
 		] = await Promise.all([
-			fetch(buildUrl("user.getrecenttracks", { limit: "7" })),
+			fetch(buildUrl("user.getrecenttracks", { limit: "7" }), {
+				next: { revalidate: 60 },
+			}),
 			fetch(
 				buildUrl("user.gettoptracks", { period: "7day", limit: "8" }),
+				{
+					next: { revalidate: 3600 },
+				},
 			),
 			fetch(
 				buildUrl("user.gettopartists", { period: "7day", limit: "8" }),
+				{
+					next: { revalidate: 3600 },
+				},
 			),
-			fetch(buildUrl("user.getinfo")),
+			fetch(buildUrl("user.getinfo"), {
+				next: { revalidate: 86400 },
+			}),
 			fetch(
 				buildUrl("user.gettopalbums", { period: "7day", limit: "7" }),
+				{
+					next: { revalidate: 3600 },
+				},
 			),
 			fetch(
 				buildUrl("user.gettopartists", {
 					period: "overall",
 					limit: "1",
 				}),
+				{
+					next: { revalidate: 86400 },
+				},
 			),
 		]);
 
