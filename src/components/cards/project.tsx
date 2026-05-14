@@ -35,7 +35,7 @@ export default function ProjectCard({ id, index, page }: Props) {
 				0.9,
 				firstVisitDelay(delays[0], delays[1], isFirstVisit),
 			)}
-			className="w-full flex shadow-lg bg-card border-border border rounded-2xl p-6 gap-5 hover:shadow-xl transition-shadow"
+			className="w-full flex flex-col md:flex-row shadow-lg bg-card border-border border rounded-2xl p-6 gap-5 hover:shadow-xl transition-shadow"
 		>
 			<div className="md:w-20 md:h-20 w-12 h-12">
 				<Image

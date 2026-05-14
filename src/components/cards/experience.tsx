@@ -26,11 +26,11 @@ export default function ExperienceCard({ experience }: Props) {
 					isFirstVisit,
 				),
 			)}
-			className="flex w-full shadow-lg bg-card border-border border rounded-2xl p-6 gap-1" 
+			className="flex w-full shadow-lg bg-card border-border border rounded-2xl p-6 gap-1 flex-col md:flex-row" 
 		>
-			<div>
+			<div className="md:w-20 md:h-20 w-16 h-16">
 				<Image
-					className="rounded-lg w-full h-auto max-w-[320px] min-w-12"
+					className="rounded-lg object-cover w-full h-full md:min-w-20 min-w-12"
 					width={320}
 					height={320}
 					src={experience.logo}

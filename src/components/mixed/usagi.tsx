@@ -114,7 +114,7 @@ export default function UsagiManager() {
                     >
                         <Image
                             src={imgSrc}
-                            alt="Usagi"
+                            alt="bixo feio do caramba"
                             width={500}
                             height={500}
                             draggable={false}

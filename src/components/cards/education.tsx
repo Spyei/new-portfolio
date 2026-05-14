@@ -26,15 +26,15 @@ export default function EducationCard({ certificate }: Props) {
 					isFirstVisit,
 				),
 			)}
-			className="w-full shadow-lg bg-card border-border border rounded-2xl p-6 gap-1 group cursor-pointer hover:shadow-xl transition-shadow"
+			className="w-full shadow-lg bg-card border-border border rounded-2xl p-6 gap-1 group cursor-pointer hover:shadow-xl transition-shadow flex flex-col md:flex-row"
 		>
 			<a
 				target="_blank"
 				rel="noreferrer"
-				className="flex gap-2"
+				className="flex gap-2 flex-col md:flex-row"
 				href={certificate.url}
 			>
-				<div className="mr-2">
+				<div className="mr-2 md:w-20 md:h-20 w-16 h-16">
 					<Image
 						className="rounded-lg w-full h-auto max-w-20 min-w-12"
 						width={320}
