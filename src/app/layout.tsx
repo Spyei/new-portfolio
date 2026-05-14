@@ -5,6 +5,7 @@ import Sidebar from "@/components/sidebar";
 import Head from "next/head";
 import { I18nProvider } from "@/contexts/i18n";
 import { ThemeProvider } from "@/contexts/theme";
+import UsagiManager from "@/components/mixed/usagi";
 
 export const metadata: Metadata = {
 	title: "Portfolio",
@@ -17,7 +18,7 @@ export default function RootLayout({
 	children: ReactNode;
 }>) {
 	return (
-		<html lang="pt-BR">
+		<html lang="pt-BR" className="transition-colors">
 			<Head>
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
 				<link
@@ -31,16 +32,17 @@ export default function RootLayout({
 				/>
 			</Head>
 			<body
-				className="font-sans antialiased bg-background text-secondary transition-colors duration-200"
+				className="font-sans antialiased bg-background text-secondary transition-all ease-in-out relative"
 			>
 				<I18nProvider>
 					<ThemeProvider>
 						<Sidebar />
-						<main className="md:ml-56 ml-16 flex-1 p-4">
+						<main className="md:ml-56 ml-16 flex-1 p-4 transition-colors">
 							<div className="max-w-3xl mx-auto">{children}</div>
 						</main>
 					</ThemeProvider>
 				</I18nProvider>
+				<UsagiManager />
 			</body>
 		</html>
 	);

@@ -11,6 +11,10 @@
 	--font-grotesk: "Familjen Grotesk", sans-serif;
 }
 
+body {
+  @apply transition-colors ease-in-out;
+}
+
 :root {
 	--background: #212121;
 	--secondary: #F9F8F0;
