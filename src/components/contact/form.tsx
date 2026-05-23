@@ -70,7 +70,7 @@ export default function ContactForm({
 
 	return (
 		<>
-			<form className="flex gap-3 flex-col mt-4" onSubmit={handleSubmit}>
+			<form className="flex gap-3 flex-col mt-4 z-10" onSubmit={handleSubmit}>
 				<input
 					type="hidden"
 					name="access_key"
