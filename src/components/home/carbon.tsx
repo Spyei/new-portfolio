@@ -34,9 +34,9 @@ export default function CarbonBadge({
 				<div className="flex flex-col gap-1 md:text-base text-sm">
 					<div className="flex gap-1">
 						<div className="relative">
-							{t.carbon.dirtierThan.replace(
+							{t.carbon.cleanerThan.replace(
 								"{percent}",
-								String(Math.round(data.dirtierThan * 100)),
+								String(Math.round(data.cleanerThan * 100)),
 							)}
 							<span className="absolute bottom-0 left-0 w-0 h-px bg-secondary transition-all duration-300 group-hover:w-full" />
 						</div>
@@ -44,6 +44,19 @@ export default function CarbonBadge({
 							className="mt-1 group-hover:mt-0 group-hover:ml-1 transition-all"
 							size={13}
 						/>
+					</div>
+					<div className="flex md:flex-row md:text-sm flex-col md:gap-2 text-xs text-secondary/80">
+						<span>
+							{t.carbon.co2PerVisit.replace(
+								"{grams}",
+								data.grams.toFixed(2),
+							)}
+						</span>
+						{data.green && (
+							<span className="text-green-500/90">
+								{t.carbon.renewable}
+							</span>
+						)}
 					</div>
 				</div>
 			</a>

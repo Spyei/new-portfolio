@@ -3,8 +3,10 @@ import Container from "@/components/ui/container";
 
 export default async function Home() {
 	const carbon = {
-		rating: "E",
-		dirtierThan: 0.57,
+		rating: "A+",
+		cleanerThan: 0.95,
+		grams: 0.03,
+		green: false,
 	};
 
 	return (
