@@ -146,9 +146,7 @@
         "noActivity": "No activity at the moment"
     },
     "carbon": {
-        "cleanerThan": "Cleaner than {percent}% of tested sites",
-        "co2PerVisit": "{grams}g CO₂/visit",
-        "renewable": "Renewable energy"
+        "dirtierThan": "Dirtier than {percent}% of pages globally"
     },
     "wakatime": {
         "lastDays": "last 7 days",

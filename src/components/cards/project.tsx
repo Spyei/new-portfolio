@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { useFirstVisit } from "@/hooks/useFirstVisit";
 import HighlightLink from "../ui/highlightLink";
 import Image from "next/image";
-import { GithubOriginalIcon } from "@devicon/react";
+import GithubOriginalIcon from "@devicon/react/github/original";
 import { useI18n } from "@/contexts/i18n";
 
 interface Props {

@@ -1,14 +1,12 @@
-import {
-	BootstrapPlainIcon,
-	JavascriptOriginalIcon,
-	NextjsOriginalIcon,
-	NodejsPlainIcon,
-	PostgresqlOriginalIcon,
-	ReactOriginalIcon,
-	RustOriginalIcon,
-	TailwindcssOriginalIcon,
-	TypescriptOriginalIcon,
-} from "@devicon/react";
+import BootstrapPlainIcon from "@devicon/react/bootstrap/plain";
+import JavascriptOriginalIcon from "@devicon/react/javascript/original";
+import NextjsOriginalIcon from "@devicon/react/nextjs/original";
+import NodejsPlainIcon from "@devicon/react/nodejs/plain";
+import PostgresqlOriginalIcon from "@devicon/react/postgresql/original";
+import ReactOriginalIcon from "@devicon/react/react/original";
+import RustOriginalIcon from "@devicon/react/rust/original";
+import TailwindcssOriginalIcon from "@devicon/react/tailwindcss/original";
+import TypescriptOriginalIcon from "@devicon/react/typescript/original";
 import type { ReactNode } from "react";
 
 interface Props {

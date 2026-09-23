@@ -45,6 +45,7 @@ export default function Option({
 	return (
 		<Link
 			href={href}
+			prefetch={false}
 			className={`relative flex gap-2 cursor-pointer transition rounded-xl p-2.5 px-3 z-10
     ${isActive ? "text-secondary" : "text-background"}`}
 		>

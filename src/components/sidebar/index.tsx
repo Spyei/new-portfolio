@@ -1,6 +1,7 @@
 "use client";
 
-import { GithubOriginalIcon, LinkedinPlainIcon } from "@devicon/react";
+import GithubOriginalIcon from "@devicon/react/github/original";
+import LinkedinPlainIcon from "@devicon/react/linkedin/plain";
 import Notch from "./notch";
 import { motion } from "framer-motion";
 import Image from "next/image";

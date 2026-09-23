@@ -71,9 +71,7 @@ export type ConnectionStatus =
 
 export interface CarbonData {
 	rating: string;
-	cleanerThan: number;
-	grams: number;
-	green: boolean;
+	dirtierThan: number;
 }
 
 export interface WakaTimeData {
