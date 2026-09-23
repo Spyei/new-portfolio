@@ -5,7 +5,7 @@ const staticExperiences = [
 	{
 		id: 0,
 		company: "Plataforma Astra",
-		logo: "/experiences/astra.png",
+		logo: "/experiences/astra.webp",
 		technologies: ["Next.js", "TypeScript", "Node.js", "Tailwindcss"],
 	},
 ];

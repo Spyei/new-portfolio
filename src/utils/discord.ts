@@ -13,7 +13,7 @@ export function resolveAssetUrl(
         return `https://i.scdn.co/image/${assetKey.replace("spotify:", "")}`;
 
     if (applicationId)
-        return `https://cdn.discordapp.com/app-assets/${applicationId}/${assetKey}.png`;
+        return `https://cdn.discordapp.com/app-assets/${applicationId}/${assetKey}.webp`;
 
     return null;
 }

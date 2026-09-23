@@ -24,7 +24,7 @@ export default function UsagiManager() {
         setIsSpecial(true);
         const specialAudio = new Audio("/usagi/audios/special.mp3");
         audioRef.current = specialAudio;
-        specialAudio.volume = 0.5;
+        specialAudio.volume = 0.2;
 
         specialAudio.play();
 
@@ -64,7 +64,7 @@ export default function UsagiManager() {
 
         const audio = new Audio(nextAudio);
         audioRef.current = audio;
-        audio.volume = 0.3;
+        audio.volume = 0.15;
         audio.play();
 
         setImgSrc(nextImage);
@@ -94,7 +94,7 @@ export default function UsagiManager() {
                                 alt="una."
                                 fill
                                 className="object-contain pointer-events-none p-15"
-                                priority
+                                sizes="100vw"
                             />
                         </motion.div>
                     </motion.div>
@@ -117,6 +117,7 @@ export default function UsagiManager() {
                             alt="bixo feio do caramba"
                             width={500}
                             height={500}
+                            sizes="200px"
                             draggable={false}
                             className="object-contain select-none pointer-events-none"
                             style={{
@@ -124,7 +125,6 @@ export default function UsagiManager() {
                                 height: `${size}px`,
                                 transition: "width 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)"
                             }}
-                            priority
                         />
                     </button>
                 </motion.div>

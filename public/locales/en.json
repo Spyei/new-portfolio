@@ -66,10 +66,9 @@
     "data": {
         "projects": [
             {
-                "id": "latens",
+                "id": "leeseo",
                 "role": "Creator & Full Stack Developer",
-                "development": "December 2025 - Present",
-                "cardDescription": "Latens is a website monitoring project that includes a dashboard and team management system."
+                "cardDescription": "Leeseo is a digital K-pop photocard collecting platform with tools to organize collections, track progress, and connect with the community."
             },
             {
                 "id": "connections",
@@ -189,6 +188,19 @@
             "NOVEL": "Novel"
         }
     },
+    "hardcover": {
+        "booksRead": "books read",
+        "pagesRead": "pages read",
+        "pagesShort": "pages",
+        "status": {
+            "currently_reading": "currently reading",
+            "want_to_read": "want to read",
+            "read": "read",
+            "paused": "paused",
+            "did_not_finish": "did not finish",
+            "other": "other"
+        }
+    },
     "lastfm": {
         "nowPlaying": "now playing",
         "recent": "recent",
@@ -204,6 +216,7 @@
         "github": "Github activity graph and fixed projects.",
         "wakatime": "Wakatime activity graph from 2023.",
         "lastfm": "Recently listened music, and data based on 1 month of scrobbles.",
-        "anilist": "List of animes I watched recently, and favorites."
+        "anilist": "List of animes I watched recently, and favorites.",
+        "hardcover": "Books organized by my reading status."
     }
 }

@@ -19,3 +19,14 @@ export const springElement = (
 		delay,
 	},
 });
+
+export const scrollReveal = (): HTMLMotionProps<"div"> => ({
+	initial: { opacity: 0, y: 24 },
+	whileInView: { opacity: 1, y: 0 },
+	viewport: { once: true, amount: 0.15 },
+	transition: {
+		type: "spring",
+		stiffness: 120,
+		damping: 20,
+	},
+});

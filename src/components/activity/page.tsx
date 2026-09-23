@@ -1,11 +1,11 @@
 "use client";
 
-import { useFirstVisit } from "@/hooks/useFirstVisit";
 import { useI18n } from "@/contexts/i18n";
 import { motion } from "framer-motion";
-import { firstVisitDelay, springElement } from "@/utils/animations";
+import { scrollReveal } from "@/utils/animations";
 import type {
 	AnilistData,
+	HardcoverData,
 	GithubData,
 	LastfmData,
 	WakaTimeData,
@@ -17,12 +17,14 @@ import GithubActivity from "./cards/github";
 import WakaTimeCard from "./cards/wakatime";
 import LastfmActivity from "./cards/lastfm";
 import AnilistActivity from "./cards/anilist";
+import HardcoverActivity from "./cards/hardcover";
 
 interface Props {
 	githubData: GithubData | null;
 	wakatimeData: WakaTimeData | null;
 	lastFmData: LastfmData | null;
 	anilistData: AnilistData | null;
+	hardcoverData: HardcoverData | null;
 }
 
 export default function ActivityContent({
@@ -30,22 +32,16 @@ export default function ActivityContent({
 	wakatimeData,
 	lastFmData,
 	anilistData,
+	hardcoverData,
 }: Props) {
-	const isFirstVisit = useFirstVisit();
 	const { t } = useI18n();
 
 	return (
 		<Container>
 			<div className="flex flex-col gap-10">
-				<DiscordActivity
-					firstVisitDelay={firstVisitDelay}
-					isFirstVisit={isFirstVisit}
-				/>
+				<DiscordActivity />
 				<motion.div
-					{...springElement(
-						0.9,
-						firstVisitDelay(2.1, 1.1, isFirstVisit),
-					)}
+					{...scrollReveal()}
 					className="flex flex-col gap-2"
 				>
 					<HighlightLink
@@ -54,22 +50,13 @@ export default function ActivityContent({
 						description={t.activity.github}
 					/>
 					{githubData && (
-						<motion.div
-							className="mt-4"
-							{...springElement(
-								0.9,
-								firstVisitDelay(2.5, 1.4, isFirstVisit),
-							)}
-						>
+						<div className="mt-4">
 							<GithubActivity data={githubData} />
-						</motion.div>
+						</div>
 					)}
 				</motion.div>
 				<motion.div
-					{...springElement(
-						0.9,
-						firstVisitDelay(3, 1.6, isFirstVisit),
-					)}
+					{...scrollReveal()}
 					className="flex flex-col gap-2"
 				>
 					<HighlightLink
@@ -78,22 +65,13 @@ export default function ActivityContent({
 						description={t.activity.wakatime}
 					/>
 					{wakatimeData && (
-						<motion.div
-							className="mt-4"
-							{...springElement(
-								0.9,
-								firstVisitDelay(3.2, 1.8, isFirstVisit),
-							)}
-						>
+						<div className="mt-4">
 							<WakaTimeCard data={wakatimeData} />
-						</motion.div>
+						</div>
 					)}
 				</motion.div>
 				<motion.div
-					{...springElement(
-						0.9,
-						firstVisitDelay(3.5, 2, isFirstVisit),
-					)}
+					{...scrollReveal()}
 					className="flex flex-col gap-2"
 				>
 					<HighlightLink
@@ -102,22 +80,13 @@ export default function ActivityContent({
 						description={t.activity.lastfm}
 					/>
 					{lastFmData && (
-						<motion.div
-							className="mt-4"
-							{...springElement(
-								0.9,
-								firstVisitDelay(3.8, 2.2, isFirstVisit),
-							)}
-						>
+						<div className="mt-4">
 							<LastfmActivity data={lastFmData} />
-						</motion.div>
+						</div>
 					)}
 				</motion.div>
 				<motion.div
-					{...springElement(
-						0.9,
-						firstVisitDelay(4.1, 2.4, isFirstVisit),
-					)}
+					{...scrollReveal()}
 					className="flex flex-col gap-2"
 				>
 					<HighlightLink
@@ -126,15 +95,24 @@ export default function ActivityContent({
 						description={t.activity.anilist}
 					/>
 					{anilistData && (
-						<motion.div
-							className="mt-4"
-							{...springElement(
-								0.9,
-								firstVisitDelay(4.4, 2.6, isFirstVisit),
-							)}
-						>
+						<div className="mt-4">
 							<AnilistActivity data={anilistData} />
-						</motion.div>
+						</div>
+					)}
+				</motion.div>
+				<motion.div
+					{...scrollReveal()}
+					className="flex flex-col gap-2"
+				>
+					<HighlightLink
+						link="https://hardcover.app/@spyei"
+						title="Hardcover"
+						description={t.activity.hardcover}
+					/>
+					{hardcoverData && (
+						<div className="mt-4">
+							<HardcoverActivity data={hardcoverData} />
+						</div>
 					)}
 				</motion.div>
 			</div>

@@ -1,16 +1,18 @@
 import ActivityContent from "@/components/activity/page";
 import { getAnilistData } from "@/lib/anilist";
+import { getHardcoverData } from "@/lib/hardcover";
 import { getGithubData } from "@/lib/github";
 import { getLastfmData } from "@/lib/lastfm";
 import { getWakaTimeData } from "@/lib/wakatime";
 
 export default async function ActivityPage() {
-	const [githubData, wakaTimeData, lastFmData, anilistData] =
+	const [githubData, wakaTimeData, lastFmData, anilistData, hardcoverData] =
 		await Promise.all([
 			getGithubData(),
 			getWakaTimeData(),
 			getLastfmData(),
 			getAnilistData(),
+			getHardcoverData(),
 		]);
 
 	return (
@@ -19,6 +21,7 @@ export default async function ActivityPage() {
 			wakatimeData={wakaTimeData}
 			lastFmData={lastFmData}
 			anilistData={anilistData}
+			hardcoverData={hardcoverData}
 		/>
 	);
 }

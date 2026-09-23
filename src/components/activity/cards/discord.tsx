@@ -13,9 +13,8 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import Title from "../../ui/title";
 import { motion } from "framer-motion";
-import { springElement } from "@/utils/animations";
+import { scrollReveal } from "@/utils/animations";
 import { Check, Copy } from "lucide-react";
-import type { HomeContextProps } from "@/components/home";
 
 const DISCORD_USER_ID = "955095844275781693";
 
@@ -26,10 +25,7 @@ const STATUS_COLORS: Record<string, string> = {
 	offline: "bg-[#80848e]",
 };
 
-export default function DiscordActivity({
-	isFirstVisit,
-	firstVisitDelay,
-}: HomeContextProps) {
+export default function DiscordActivity() {
 	const { data } = useDiscordActivity({ userId: DISCORD_USER_ID });
 	const { t } = useI18n();
 	const [copy, setCopy] = useState(false);
@@ -49,7 +45,7 @@ export default function DiscordActivity({
 
 	return (
 		<motion.div
-			{...springElement(0.9, firstVisitDelay(1.1, 0.1, isFirstVisit))}
+			{...scrollReveal()}
 			className="flex flex-col gap-2"
 		>
 			<div className="flex items-center gap-3">
@@ -64,7 +60,6 @@ export default function DiscordActivity({
 			</div>
 			<span>{t.discord.description}</span>
 			<motion.div
-				{...springElement(0.9, firstVisitDelay(1.3, 0.3, isFirstVisit))}
 				className="w-full shadow-lg bg-card border-border border rounded-2xl p-6 gap-4 flex flex-col mt-4"
 			>
 				<div className="flex items-center gap-3">
@@ -73,12 +68,13 @@ export default function DiscordActivity({
 							<Image
 								src={
 									data.discord_user.avatar
-										? `https://cdn.discordapp.com/avatars/${data.discord_user.id}/${data.discord_user.avatar}.png?size=80`
+										? `https://cdn.discordapp.com/avatars/${data.discord_user.id}/${data.discord_user.avatar}.webp?size=80`
 										: `https://cdn.discordapp.com/embed/avatars/${Number(data.discord_user.discriminator) % 5}.png`
 								}
 								alt={data.discord_user.username}
 								width={40}
 								height={40}
+								sizes="48px"
 								className="w-12 h-12 rounded-full"
 							/>
 						) : (
@@ -113,34 +109,18 @@ export default function DiscordActivity({
 					{data && (
 						<>
 							{visibleActivities.map((activity) => (
-								<motion.div
-									{...springElement(
-										0.9,
-										firstVisitDelay(1, 0.2, isFirstVisit),
-									)}
+								<ActivityCard
 									key={activity.id}
-								>
-									<ActivityCard
-										t={t}
-										key={activity.id}
-										activity={activity}
-									/>
-								</motion.div>
+									t={t}
+									activity={activity}
+								/>
 							))}
 							{data.listening_to_spotify && data.spotify && (
-								<motion.div
-									{...springElement(
-										0.9,
-										firstVisitDelay(1.1, 0.3, isFirstVisit),
-									)}
+								<SpotifyCard
 									key={1}
-								>
-									<SpotifyCard
-										key={1}
-										t={t}
-										spotify={data.spotify}
-									/>
-								</motion.div>
+									t={t}
+									spotify={data.spotify}
+								/>
 							)}
 							{!data.listening_to_spotify &&
 								visibleActivities.length === 0 && (
@@ -209,6 +189,7 @@ function SpotifyCard({ spotify, t }: { spotify: SpotifyData; t: Messages }) {
 					alt={spotify.album}
 					width={56}
 					height={56}
+					sizes="(min-width: 768px) 56px, 40px"
 					className="w-10 h-10 md:h-14 md:w-14 rounded-lg object-cover shadow-md shrink-0"
 				/>
 				<div className="w-full">
@@ -294,6 +275,7 @@ function ActivityCard({ activity, t }: { activity: Activity; t: Messages }) {
 							alt={activity.assets?.large_text ?? activity.name}
 							width={56}
 							height={56}
+							sizes="(min-width: 768px) 56px, 40px"
 							className="w-10 h-10 md:h-14 md:w-14 rounded-lg object-cover shadow-md"
 						/>
 						{smallImg && (
@@ -302,6 +284,7 @@ function ActivityCard({ activity, t }: { activity: Activity; t: Messages }) {
 								alt={activity.assets?.small_text ?? ""}
 								width={20}
 								height={20}
+								sizes="20px"
 								className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full border-2 border-card object-cover"
 							/>
 						)}

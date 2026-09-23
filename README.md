@@ -60,6 +60,8 @@ public/
 
 ## Rodando localmente
 
+Para carregar os livros do Hardcover na aba de atividades, gere um token em [Hardcover API settings](https://hardcover.app/account/api) e defina `HARDCOVER_API_KEY` no `.env.local`. O token é usado somente nas requisições feitas pelo servidor.
+
 ```bash
 # Instalar dependências
 npm install

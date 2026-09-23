@@ -42,6 +42,7 @@ export default function ProjectCard({ id, index, page }: Props) {
 					className="rounded-lg object-cover w-full h-full md:min-w-20 min-w-12"
 					width={64}
 					height={64}
+					sizes="(min-width: 768px) 80px, 48px"
 					src={project.icon}
 					alt={project.name}
 				/>
@@ -64,13 +65,15 @@ export default function ProjectCard({ id, index, page }: Props) {
 				</a>
 
 				<div className="flex flex-col md:flex-row gap-2 mt-2">
-					<ul className="flex gap-2 grow">
-						{project.technologies.map((technology) => (
-							<li key={technology}>
-								{technologies[technology].icon}
-							</li>
-						))}
-					</ul>
+					{project.technologies.length > 0 && (
+						<ul className="flex gap-2 grow">
+							{project.technologies.map((technology) => (
+								<li key={technology}>
+									{technologies[technology].icon}
+								</li>
+							))}
+						</ul>
+					)}
 					<div className="flex gap-2 items-center">
 						{project.github && (
 							<motion.a
@@ -88,9 +91,11 @@ export default function ProjectCard({ id, index, page }: Props) {
 								<GithubOriginalIcon color="#F9F8F0" size={22} />
 							</motion.a>
 						)}
-						<span className="italic text-sm">
-							{project.development}
-						</span>
+						{project.development && (
+							<span className="italic text-sm">
+								{project.development}
+							</span>
+						)}
 					</div>
 				</div>
 			</div>

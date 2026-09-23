@@ -41,6 +41,7 @@ export default function CertificateCard({ certificate }: Props) {
 						className="rounded-lg w-full h-auto max-w-20 min-w-12"
 						width={320}
 						height={320}
+						sizes="(min-width: 768px) 80px, 64px"
 						src={certificate.logo}
 						alt={certificate.name}
 					/>

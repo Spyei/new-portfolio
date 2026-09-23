@@ -189,3 +189,26 @@ export interface AnilistData {
 	favoriteAnime: AnilistFavorite[];
 	favoriteManga: AnilistFavorite[];
 }
+
+export interface HardcoverBook {
+	id: number;
+	title: string;
+	coverImage: string | null;
+	authors: string[];
+	pages: number | null;
+	progressPages: number | null;
+	status:
+		| "want_to_read"
+		| "currently_reading"
+		| "read"
+		| "paused"
+		| "did_not_finish"
+		| "other";
+	statusLabel: string;
+}
+
+export interface HardcoverData {
+	books: HardcoverBook[];
+	totalBooksRead: number;
+	totalPagesRead: number;
+}

@@ -111,6 +111,7 @@ function FavoriteCard({ favorite }: { favorite: AnilistFavorite }) {
 					className="object-cover"
 					width={300}
 					height={300}
+					sizes="64px"
 				/>
 			) : (
 				<div className="w-full h-full bg-secondary/10" />
@@ -171,6 +172,7 @@ function MediaCard({ media, t }: { media: AnilistMedia; t: Messages }) {
 						className="object-cover"
 						width={300}
 						height={300}
+						sizes="48px"
 					/>
 				) : (
 					<div className="w-full h-full bg-secondary/10" />
