@@ -19,7 +19,7 @@ const staticProjects: Project[] = [
 		name: "Leeseo",
 		website: "https://leeseobot.app",
 		icon: "/projects/leeseo.webp",
-		technologies: ["Next.js", "TypeScript", "Tailwindcss", "Prisma", "PostgreSQL"],
+		technologies: ["Next.js", "TypeScript", "Tailwindcss", "PostgreSQL"],
 		github: "https://github.com/leeseoworkspace",
 	},
 	{

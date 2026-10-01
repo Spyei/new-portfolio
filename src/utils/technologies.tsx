@@ -19,22 +19,22 @@ interface Props {
 export const technologies: Record<string, Props> = {
 	TypeScript: {
 		shadow: "shadow-secondary/20",
-		icon: <TypescriptOriginalIcon color="var(--secondary)" size={22} />,
+		icon: <TypescriptOriginalIcon className="technology-icon" size={22} />,
 		href: "https://www.typescriptlang.org/",
 	},
 	JavaScript: {
 		shadow: "shadow-secondary/20",
-		icon: <JavascriptOriginalIcon color="var(--secondary)" size={22} />,
+		icon: <JavascriptOriginalIcon className="technology-icon" size={22} />,
 		href: "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript",
 	},
 	"Next.js": {
 		shadow: "shadow-secondary/20",
-		icon: <NextjsOriginalIcon color="var(--secondary)" size={22} />,
+		icon: <NextjsOriginalIcon className="technology-icon" size={22} />,
 		href: "https://nextjs.org/",
 	},
 	React: {
 		shadow: "shadow-secondary/20",
-		icon: <ReactOriginalIcon color="var(--secondary)" size={22} />,
+		icon: <ReactOriginalIcon className="technology-icon" size={22} />,
 		href: "https://react.dev/",
 	},
 	"Node.js": {
