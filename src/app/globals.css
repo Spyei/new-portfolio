@@ -31,11 +31,6 @@ body {
 	--highlight: #F3BC34;
 }
 
-
-.technology-icon, .technology-icon * {
-	fill: var(--secondary) !important;
-}
-
 .sidebar-scroll {
 	scrollbar-width: thin;
 	scrollbar-color: var(--background) transparent;

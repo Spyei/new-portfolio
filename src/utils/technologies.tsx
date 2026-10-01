@@ -1,13 +1,13 @@
 import BootstrapPlainIcon from "@devicon/react/bootstrap/plain";
-import JavascriptOriginalIcon from "@devicon/react/javascript/original";
+import JavascriptPlainIcon from "@devicon/react/javascript/plain";
 import NextjsOriginalIcon from "@devicon/react/nextjs/original";
 import NodejsPlainIcon from "@devicon/react/nodejs/plain";
-import PostgresqlOriginalIcon from "@devicon/react/postgresql/original";
+import PostgresqlPlainIcon from "@devicon/react/postgresql/plain";
 import PrismaOriginalIcon from "@devicon/react/prisma/original";
 import ReactOriginalIcon from "@devicon/react/react/original";
 import RustOriginalIcon from "@devicon/react/rust/original";
 import TailwindcssOriginalIcon from "@devicon/react/tailwindcss/original";
-import TypescriptOriginalIcon from "@devicon/react/typescript/original";
+import TypescriptPlainIcon from "@devicon/react/typescript/plain";
 import type { ReactNode } from "react";
 
 interface Props {
@@ -19,22 +19,22 @@ interface Props {
 export const technologies: Record<string, Props> = {
 	TypeScript: {
 		shadow: "shadow-secondary/20",
-		icon: <TypescriptOriginalIcon className="technology-icon" size={22} />,
+		icon: <TypescriptPlainIcon color="var(--secondary)" size={22} />,
 		href: "https://www.typescriptlang.org/",
 	},
 	JavaScript: {
 		shadow: "shadow-secondary/20",
-		icon: <JavascriptOriginalIcon className="technology-icon" size={22} />,
+		icon: <JavascriptPlainIcon color="var(--secondary)" size={22} />,
 		href: "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript",
 	},
 	"Next.js": {
 		shadow: "shadow-secondary/20",
-		icon: <NextjsOriginalIcon className="technology-icon" size={22} />,
+		icon: <NextjsOriginalIcon size={22} />,
 		href: "https://nextjs.org/",
 	},
 	React: {
 		shadow: "shadow-secondary/20",
-		icon: <ReactOriginalIcon className="technology-icon" size={22} />,
+		icon: <ReactOriginalIcon size={22} />,
 		href: "https://react.dev/",
 	},
 	"Node.js": {
@@ -64,7 +64,7 @@ export const technologies: Record<string, Props> = {
 	},
 	PostgreSQL: {
 		shadow: "shadow-secondary/20",
-		icon: <PostgresqlOriginalIcon color="var(--secondary)" size={22} />,
+		icon: <PostgresqlPlainIcon color="var(--secondary)" size={22} />,
 		href: "https://www.postgresql.org/",
 	},
 };
