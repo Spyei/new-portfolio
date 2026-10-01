@@ -1,6 +1,6 @@
 import BootstrapPlainIcon from "@devicon/react/bootstrap/plain";
 import JavascriptPlainIcon from "@devicon/react/javascript/plain";
-import NextjsOriginalIcon from "@devicon/react/nextjs/original";
+import NextjsPlainIcon from "@devicon/react/nextjs/plain";
 import NodejsPlainIcon from "@devicon/react/nodejs/plain";
 import PostgresqlPlainIcon from "@devicon/react/postgresql/plain";
 import PrismaOriginalIcon from "@devicon/react/prisma/original";
@@ -29,12 +29,12 @@ export const technologies: Record<string, Props> = {
 	},
 	"Next.js": {
 		shadow: "shadow-secondary/20",
-		icon: <NextjsOriginalIcon size={22} />,
+		icon: <NextjsPlainIcon color="var(--secondary)" size={22} />,
 		href: "https://nextjs.org/",
 	},
 	React: {
 		shadow: "shadow-secondary/20",
-		icon: <ReactOriginalIcon size={22} />,
+		icon: <ReactOriginalIcon className="react-themed-icon" size={22} />,
 		href: "https://react.dev/",
 	},
 	"Node.js": {

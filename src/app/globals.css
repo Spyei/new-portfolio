@@ -31,6 +31,15 @@ body {
 	--highlight: #F3BC34;
 }
 
+::selection {
+	background: var(--secondary);
+	color: var(--background);
+}
+
+.react-themed-icon, .react-themed-icon * {
+	fill: var(--secondary) !important;
+}
+
 .sidebar-scroll {
 	scrollbar-width: thin;
 	scrollbar-color: var(--background) transparent;
