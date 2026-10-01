@@ -3,6 +3,7 @@ import JavascriptOriginalIcon from "@devicon/react/javascript/original";
 import NextjsOriginalIcon from "@devicon/react/nextjs/original";
 import NodejsPlainIcon from "@devicon/react/nodejs/plain";
 import PostgresqlOriginalIcon from "@devicon/react/postgresql/original";
+import PrismaOriginalIcon from "@devicon/react/prisma/original";
 import ReactOriginalIcon from "@devicon/react/react/original";
 import RustOriginalIcon from "@devicon/react/rust/original";
 import TailwindcssOriginalIcon from "@devicon/react/tailwindcss/original";
@@ -55,6 +56,11 @@ export const technologies: Record<string, Props> = {
 		shadow: "shadow-secondary/20",
 		icon: <RustOriginalIcon color="var(--secondary)" size={22} />,
 		href: "https://www.rust-lang.org/",
+	},
+	Prisma: {
+		shadow: "shadow-secondary/20",
+		icon: <PrismaOriginalIcon color="var(--secondary)" size={22} />,
+		href: "https://www.prisma.io/",
 	},
 	PostgreSQL: {
 		shadow: "shadow-secondary/20",

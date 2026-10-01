@@ -51,7 +51,7 @@ export default function ExperienceCard({ experience }: Props) {
 				<div className="flex gap-2">
 					{experience.technologies.map((technology) => (
 						<li key={technology}>
-							{technologies[technology].icon}
+							{technologies[technology]?.icon}
 						</li>
 					))}
 				</div>

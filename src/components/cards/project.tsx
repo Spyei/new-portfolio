@@ -69,7 +69,7 @@ export default function ProjectCard({ id, index, page }: Props) {
 						<ul className="flex gap-2 grow">
 							{project.technologies.map((technology) => (
 								<li key={technology}>
-									{technologies[technology].icon}
+									{technologies[technology]?.icon}
 								</li>
 							))}
 						</ul>
