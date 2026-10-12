@@ -15,7 +15,6 @@
         "greeting": "Hi, my name is Caio",
         "role": "Full Stack Developer",
         "description": "Full Stack Developer with 3 years of hands-on experience building and operating web applications. I work with Next.js, TypeScript, and Node.js, focusing on performance and user experience. I also study how people make decisions and apply that knowledge to create clearer interfaces and experiences that encourage engagement.",
-        "collaboration": "I believe collaboration is essential for success.",
         "technologies": {
             "title": "Technologies",
             "description": "Languages and tools I use on a daily basis."

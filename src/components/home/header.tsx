@@ -41,7 +41,6 @@ export default function Header({
 					</motion.div>
 				</span>{" "}
 				{t.home.description}
-				<div>{t.home.collaboration}</div>
 			</div>
 		</motion.div>
 	);
